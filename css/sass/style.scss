@@ -1486,13 +1486,13 @@ background-image: url("another-pale-blur-small.jpg");
     background-color: #fff;
   }
   .winter nav.top {
-    background-color: #228494;
+    background-color: transparent;
   }
   .winter nav.top li:hover a {
     color: #fff;
   }
   .winter nav.top a:link, .winter nav.top a:visited {
-    color: #def9ff;
+    color: #000000;
   }
   .winter nav.top a:active, .winter nav.top a:hover, .winter nav.top a:focus, .winter nav.top a.open {
     color: #fff;
