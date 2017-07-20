@@ -1,10 +1,10 @@
-<?php echo head(array('title' => metadata('item', array('ISAD-G', 'ISAD-G Title')),'bodyclass' => 'items show')); ?>
+<?php echo head(array('title' => metadata('item', array('GATE', 'GATE Title')),'bodyclass' => 'items show')); ?>
 
 <div>
 <table>
 <tr>
 
-<th><h2><?php echo metadata('item', array('ISAD-G', 'ISAD-G Title')); ?></h2></th>
+<th><h2><?php echo metadata('item', array('GATE', 'GATE Title')); ?></h2></th>
 
 <?php if (metadata('item', 'Collection Name')): ?> 
 
@@ -44,7 +44,7 @@
 
 <!--    ------------------------------------------------------------------------------------------------------- -->
 
-     <p>Title : <b><?php echo metadata('item', array('ISAD-G', 'ISAD-G Title')); ?></b></p>
+     <p>Title : <b><?php echo metadata('item', array('GATE', 'GATE Title')); ?></b></p>
 
 
 </div>
@@ -55,151 +55,151 @@
 
 <!--    ------------------------------------------------------------------------------------------------------- -->
 
-<!-- ISAD-G Reference Code -->
+<!-- GATE Reference Code -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Reference code'))): ?> 
-<p><b>Reference code :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Reference code')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Reference code'))): ?> 
+<p><b>Reference code :</b> <?php echo metadata('item', array('GATE', 'GATE Reference code')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Title -->
+<!-- GATE Title -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Title'))): ?> 
-<p><b>Title :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Title')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Title'))): ?> 
+<p><b>Title :</b> <?php echo metadata('item', array('GATE', 'GATE Title')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Name of Creator -->
+<!-- GATE Name of Creator -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Name of Creator'))): ?> 
-<p><b>Name of Creator :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Name of Creator')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Name of Creator'))): ?> 
+<p><b>Name of Creator :</b> <?php echo metadata('item', array('GATE', 'GATE Name of Creator')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Dates of Creation -->
+<!-- GATE Dates of Creation -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Dates of Creation'))): ?>
-<p><b>Dates of Creation :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Dates of Creation')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Dates of Creation'))): ?>
+<p><b>Dates of Creation :</b> <?php echo metadata('item', array('GATE', 'GATE Dates of Creation')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Extent of the Unit of Description -->
+<!-- GATE Extent of the Unit of Description -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Extent of the Unit of Description'))): ?>
-<p><b>Extent of the unit of description :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Extent of the Unit of Description')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Extent of the Unit of Description'))): ?>
+<p><b>Extent of the unit of description :</b> <?php echo metadata('item', array('GATE', 'GATE Extent of the Unit of Description')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Level of description -->
+<!-- GATE Level of description -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Level of description'))): ?>
-<p><b>Level of description :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Level of description')); ?></p\
+<?php if (metadata('item', array('GATE','GATE Level of description'))): ?>
+<p><b>Level of description :</b> <?php echo metadata('item', array('GATE', 'GATE Level of description')); ?></p\
 >
 <?php endif; ?>
 
 
 
-<!-- ISAD-G Language of material -->
+<!-- GATE Language of material -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Language of material'))): ?> 
-<p><b>Language of material :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Language of material')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Language of material'))): ?> 
+<p><b>Language of material :</b> <?php echo metadata('item', array('GATE', 'GATE Language of material')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Conditions governing access -->
+<!-- GATE Conditions governing access -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Conditions governing access'))): ?> 
-<p><b>Conditions governing access :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Conditions governing access')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Conditions governing access'))): ?> 
+<p><b>Conditions governing access :</b> <?php echo metadata('item', array('GATE', 'GATE Conditions governing access')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Collection Scope and Content -->
+<!-- GATE Collection Scope and Content -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Collection Scope and Content'))): ?> 
-<p><b>Collection Scope and Content :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Collection Scope and Content')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Collection Scope and Content'))): ?> 
+<p><b>Collection Scope and Content :</b> <?php echo metadata('item', array('GATE', 'GATE Collection Scope and Content')); ?></p>
 <?php endif; ?>
 
-<!-- ISAD-G Description -->
+<!-- GATE Description -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Description'))): ?> 
-<p><b>Description :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Description')); ?></p>
-<?php endif; ?>
-
-
-<!-- ISAD-G Location it came from -->
-
-<?php if (metadata('item', array('ISAD-G','ISAD-G Location it came from'))): ?> 
-<p><b>Location it came from :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Location it came from')); ?></p>
-<?php endif; ?>
-
-<!-- ISAD-G Current location -->
-
-<?php if (metadata('item', array('ISAD-G','ISAD-G Current location'))): ?> 
-<p><b>Current location :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Current location')); ?></p>
-<?php endif; ?>
-
-<!-- ISAD-G medium/material/format -->
-
-<?php if (metadata('item', array('ISAD-G','ISAD-G medium/material/format'))): ?> 
-<p><b>medium/material/format :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G medium/material/format')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Description'))): ?> 
+<p><b>Description :</b> <?php echo metadata('item', array('GATE', 'GATE Description')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Purpose -->
+<!-- GATE Location it came from -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Purpose'))): ?> 
-<p><b>Purpose :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Purpose')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Location it came from'))): ?> 
+<p><b>Location it came from :</b> <?php echo metadata('item', array('GATE', 'GATE Location it came from')); ?></p>
+<?php endif; ?>
+
+<!-- GATE Current location -->
+
+<?php if (metadata('item', array('GATE','GATE Current location'))): ?> 
+<p><b>Current location :</b> <?php echo metadata('item', array('GATE', 'GATE Current location')); ?></p>
+<?php endif; ?>
+
+<!-- GATE medium/material/format -->
+
+<?php if (metadata('item', array('GATE','GATE medium/material/format'))): ?> 
+<p><b>medium/material/format :</b> <?php echo metadata('item', array('GATE', 'GATE medium/material/format')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G Notes -->
+<!-- GATE Purpose -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G Notes'))): ?> 
-<p><b>Notes :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G Notes')); ?></p>
-<?php endif; ?>
-
-<!-- ISAD-G size/dimensions -->
-
-<?php if (metadata('item', array('ISAD-G','ISAD-G size/dimensions'))): ?> 
-<p><b>size/dimensions :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G size/dimensions')); ?></p>
-<?php endif; ?>
-
-<!-- ISAD-G related units of description -->
-
-<?php if (metadata('item', array('ISAD-G','ISAD-G related units of description'))): ?> 
-<p><b>Related units of description :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G related units of description')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Purpose'))): ?> 
+<p><b>Purpose :</b> <?php echo metadata('item', array('GATE', 'GATE Purpose')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G date of description -->
+<!-- GATE Notes -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G date of description'))): ?> 
-<p><b>Date of description :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G date of description')); ?></p>
+<?php if (metadata('item', array('GATE','GATE Notes'))): ?> 
+<p><b>Notes :</b> <?php echo metadata('item', array('GATE', 'GATE Notes')); ?></p>
 <?php endif; ?>
 
-<!-- ISAD-G physical characteristics and technical requirements -->
+<!-- GATE size/dimensions -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G physical characteristics and technical requirements'))): ?> 
-<p><b>Physical characteristics and technical requirements :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G physical characteristics and technical requirements')); ?></p>
+<?php if (metadata('item', array('GATE','GATE size/dimensions'))): ?> 
+<p><b>size/dimensions :</b> <?php echo metadata('item', array('GATE', 'GATE size/dimensions')); ?></p>
 <?php endif; ?>
 
-<!-- ISAD-G community it belongs to -->
+<!-- GATE related units of description -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G community it belongs to'))): ?> 
-<p><b>Community it belongs to :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G community it belongs to')); ?></p>
+<?php if (metadata('item', array('GATE','GATE related units of description'))): ?> 
+<p><b>Related units of description :</b> <?php echo metadata('item', array('GATE', 'GATE related units of description')); ?></p>
 <?php endif; ?>
 
 
-<!-- ISAD-G families it relates to -->
+<!-- GATE date of description -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G families it relates to'))): ?> 
-<p><b>Families it relates to :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G families it relates to')); ?></p>
+<?php if (metadata('item', array('GATE','GATE date of description'))): ?> 
+<p><b>Date of description :</b> <?php echo metadata('item', array('GATE', 'GATE date of description')); ?></p>
 <?php endif; ?>
 
-<!-- ISAD-G comments -->
+<!-- GATE physical characteristics and technical requirements -->
 
-<?php if (metadata('item', array('ISAD-G','ISAD-G comments'))): ?> 
-<p><b>Comments :</b> <?php echo metadata('item', array('ISAD-G', 'ISAD-G comments')); ?></p>
+<?php if (metadata('item', array('GATE','GATE physical characteristics and technical requirements'))): ?> 
+<p><b>Physical characteristics and technical requirements :</b> <?php echo metadata('item', array('GATE', 'GATE physical characteristics and technical requirements')); ?></p>
+<?php endif; ?>
+
+<!-- GATE community it belongs to -->
+
+<?php if (metadata('item', array('GATE','GATE community it belongs to'))): ?> 
+<p><b>Community it belongs to :</b> <?php echo metadata('item', array('GATE', 'GATE community it belongs to')); ?></p>
+<?php endif; ?>
+
+
+<!-- GATE families it relates to -->
+
+<?php if (metadata('item', array('GATE','GATE families it relates to'))): ?> 
+<p><b>Families it relates to :</b> <?php echo metadata('item', array('GATE', 'GATE families it relates to')); ?></p>
+<?php endif; ?>
+
+<!-- GATE comments -->
+
+<?php if (metadata('item', array('GATE','GATE comments'))): ?> 
+<p><b>Comments :</b> <?php echo metadata('item', array('GATE', 'GATE comments')); ?></p>
 <?php endif; ?>
 
 
