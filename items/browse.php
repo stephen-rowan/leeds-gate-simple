@@ -12,7 +12,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
   
 <li class="item record">
 
-<h4><?php echo link_to_item(metadata('item', array('GATE', 'GATE Title')), array('class'=>'permalink')); ?></h4>
+<h4><?php echo link_to_item(metadata('item', array('Leeds-GATE element set', 'GATE Title')), array('class'=>'permalink')); ?></h4>
 
 <div class="item-meta">
 
@@ -24,7 +24,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <?php endif; ?>
 
-    <?php if ($description = metadata('item', array('GATE', 'GATE Name of Creator'), array('snippet'=>250))): ?>
+    <?php if ($description = metadata('item', array('Leeds-GATE element set', 'GATE Name of Creator'), array('snippet'=>250))): ?>
     <div class="item-description">
     <?php echo $description; ?>
     </div>
