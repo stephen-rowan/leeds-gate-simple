@@ -55,154 +55,187 @@
 
 <!--    ------------------------------------------------------------------------------------------------------- -->
 
-<!-- Leeds-GATE element set Reference Code -->
+<!-- 1) GATE Reference Code -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Reference code'))): ?> 
-<p><b>Reference code :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Reference code')); ?></p>
+<p><b>1) Reference code :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Reference code')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Title -->
+<!-- 2) GATE Title -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Title'))): ?> 
-<p><b>Title :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?></p>
+<p><b>2) Title :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Name of Creator -->
+<!-- 3) GATE Name of Creator -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Name of Creator'))): ?> 
-<p><b>Name of Creator :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Name of Creator')); ?></p>
+<p><b>3) Name of Creator :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Name of Creator')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Dates of Creation -->
+<!-- 4) GATE Dates of Creation -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Dates of Creation'))): ?>
-<p><b>Dates of Creation :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Dates of Creation')); ?></p>
+<p><b>4) Dates of Creation :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Dates of Creation')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Extent of the Unit of Description -->
-
-<?php if (metadata('item', array('Leeds-GATE element set','GATE Extent of the Unit of Description'))): ?>
-<p><b>Extent of the unit of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Extent of the Unit of Description')); ?></p>
-<?php endif; ?>
-
-
-<!-- Leeds-GATE element set Level of description -->
+<!-- 5) GATE Level of description -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Level of description'))): ?>
-<p><b>Level of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Level of description')); ?></p\
+<p><b>5) Level of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Level of description')); ?></p\
 >
 <?php endif; ?>
 
 
+<!-- 6) GATE Collection -->
 
-<!-- Leeds-GATE element set Language of material -->
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Collection'))): ?>
+<p><b>6) Collection :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Collection')); ?></p\
+>
+<?php endif; ?>
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE Language of material'))): ?> 
-<p><b>Language of material :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Language of material')); ?></p>
+<!-- 7) GATE Sub-collection -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Sub-collection'))): ?>
+<p><b>7) Sub-collection :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Sub-collection')); ?></p\
+>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Conditions governing access -->
+<!-- 8) GATE Extent and medium of the unit of description -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Extent and medium of the unit of description'))): ?>
+<p><b>8) Extent of the unit of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Extent and medium of the unit of description')); ?></p>
+<?php endif; ?>
+
+<!-- 9) GATE Physical characteristics and technical requirements -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Physical characteristics and technical requirements'))): ?> 
+<p><b>9) Physical characteristics and technical requirements :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Physical characteristics and technical requirements')); ?></p>
+<?php endif; ?>
+
+<!-- 10) GATE Conditions governing access -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Conditions governing access'))): ?> 
-<p><b>Conditions governing access :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing access')); ?></p>
+<p><b>10) Conditions governing access :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing access')); ?></p>
+<?php endif; ?>
+
+<!-- 11) GATE Conditions governing reproduction -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Conditions governing reproduction'))): ?> 
+<p><b>11) Conditions governing reproduction :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing reproduction')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Collection Scope and Content -->
+<!-- 12) GATE Language of material -->
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE Collection Scope and Content'))): ?> 
-<p><b>Collection Scope and Content :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Collection Scope and Content')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Language of material'))): ?> 
+<p><b>12) Language of material :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Language of material')); ?></p>
 <?php endif; ?>
 
-<!-- Leeds-GATE element set Description -->
+
+<!-- 13) GATE Description -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Description'))): ?> 
-<p><b>Description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Description')); ?></p>
+<p><b>13) Description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Description')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Location it came from -->
+<!-- 14) GATE Date(s) of description -->
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE Location it came from'))): ?> 
-<p><b>Location it came from :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Location it came from')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Date(s) of description'))): ?> 
+<p><b>14) Date(s) of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Date(s) of description')); ?></p>
 <?php endif; ?>
 
-<!-- Leeds-GATE element set Current location -->
+
+<!-- 15) GATE Geographical area -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Geographical area'))): ?> 
+<p><b>15) Geographical area :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Geographical area')); ?></p>
+<?php endif; ?>
+
+<!-- 16) GATE Immediate source of acquisition or transfer -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Immediate source of acquisition or transfer'))): ?> 
+<p><b>16) Immediate source of acquisition or transfer :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Immediate source of acquisition or transfer')); ?></p>
+<?php endif; ?>
+
+
+<!-- 17) GATE Current location -->
 
 <?php if (metadata('item', array('Leeds-GATE element set','GATE Current location'))): ?> 
-<p><b>Current location :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Current location')); ?></p>
-<?php endif; ?>
-
-<!-- Leeds-GATE element set medium/material/format -->
-
-<?php if (metadata('item', array('Leeds-GATE element set','GATE medium/material/format'))): ?> 
-<p><b>medium/material/format :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE medium/material/format')); ?></p>
+<p><b>17) Current location :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Current location')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Purpose -->
+<!-- 18) GATE Related units of description -->
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE Purpose'))): ?> 
-<p><b>Purpose :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Purpose')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Related units of description'))): ?> 
+<p><b>18) Related units of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Related units of description')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set Notes -->
+<!-- 19) GATE Archival history -->
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE Notes'))): ?> 
-<p><b>Notes :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Notes')); ?></p>
-<?php endif; ?>
-
-<!-- Leeds-GATE element set size/dimensions -->
-
-<?php if (metadata('item', array('Leeds-GATE element set','GATE size/dimensions'))): ?> 
-<p><b>size/dimensions :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE size/dimensions')); ?></p>
-<?php endif; ?>
-
-<!-- Leeds-GATE element set related units of description -->
-
-<?php if (metadata('item', array('Leeds-GATE element set','GATE related units of description'))): ?> 
-<p><b>Related units of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE related units of description')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Archival history'))): ?> 
+<p><b>19) Archival history :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Archival history')); ?></p>
 <?php endif; ?>
 
 
-<!-- Leeds-GATE element set date of description -->
+<!-- 20) GATE Archivists note -->
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE date of description'))): ?> 
-<p><b>Date of description :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE date of description')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Archivists note'))): ?> 
+<p><b>20) Archivists note :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Archivists note')); ?></p>
 <?php endif; ?>
 
-<!-- Leeds-GATE element set physical characteristics and technical requirements -->
+<hr>
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE physical characteristics and technical requirements'))): ?> 
-<p><b>Physical characteristics and technical requirements :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE physical characteristics and technical requirements')); ?></p>
+<!-- 21) GATE Families -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Families'))): ?> 
+<p><b>21) Families :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Families')); ?></p>
 <?php endif; ?>
 
-<!-- Leeds-GATE element set community it belongs to -->
+<!-- 22) GATE Gypsy & Traveller voices -->
 
-<?php if (metadata('item', array('Leeds-GATE element set','GATE community it belongs to'))): ?> 
-<p><b>Community it belongs to :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE community it belongs to')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Gypsy & Traveller voices'))): ?> 
+<p><b>22) Gypsy & Traveller voices :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Gypsy & Traveller voices')); ?></p>
 <?php endif; ?>
 
+<!-- 23) GATE Contentions -->
 
-<!-- Leeds-GATE element set families it relates to -->
-
-<?php if (metadata('item', array('Leeds-GATE element set','GATE families it relates to'))): ?> 
-<p><b>Families it relates to :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE families it relates to')); ?></p>
-<?php endif; ?>
-
-<!-- Leeds-GATE element set comments -->
-
-<?php if (metadata('item', array('Leeds-GATE element set','GATE comments'))): ?> 
-<p><b>Comments :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE comments')); ?></p>
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Contentions'))): ?> 
+<p><b>23) Contentions :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Contentions')); ?></p>
 <?php endif; ?>
 
 
+<!-- 24) GATE System of arrangement -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE System of arrangement'))): ?> 
+<p><b>24) GATE System of arrangement :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE System of arrangement')); ?></p>
+<?php endif; ?>
+
+<!-- 25) GATE Biographical history -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Biographical history'))): ?> 
+<p><b>25) Biographical history :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Biographical history')); ?></p>
+<?php endif; ?>
+
+<!-- 26) GATE Existence and location of originals -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Existence and location of originals'))): ?> 
+<p><b>26) Existence and location of originals :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Existence and location of originals')); ?></p>
+<?php endif; ?>
+
+<!-- 27) GATE Existence and location of copies -->
+
+<?php if (metadata('item', array('Leeds-GATE element set','GATE Existence and location of copies'))): ?> 
+<p><b>27) Existence and location of copies :</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Existence and location of copies')); ?></p>
+<?php endif; ?>
 
 </div>
 
