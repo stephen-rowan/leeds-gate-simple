@@ -4,21 +4,16 @@
 <p><?php echo get_theme_option('Homepage Text'); ?></p>
 <?php endif; ?>
 
+<h1>Test</h1>
+
+
 <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
 <!-- Featured Item -->
 <div id="featured-item">
-
-<p>A short bit of “Leeds GATE Archives is...” text goes here,
-so that people know at first glance what the site is I don’t think there ought to
-be any kind of border around it - it’s just a column with text in it.
-But if there’s any problems with it showing up against the background, 
-we might have to rethink, or remove the background.</p>
-
-
+    <h2><?php echo __('Featured'); ?></h2>
+    <?php echo random_featured_items(1); ?>
 </div><!--end featured-item-->
 <?php endif; ?>
-
-
 
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
 
@@ -28,15 +23,6 @@ we might have to rethink, or remove the background.</p>
     <h2>Browse our collections</h2>
    
 </div><!-- end Browse our collections -->
-
-
-<?php if (get_theme_option('Display Featured Item') !== '0'): ?>
-<!-- Featured Item -->
-<div id="featured-collection">
-    <h2><?php echo __('Featured item'); ?></h2>
-    <?php echo random_featured_items(1); ?>
-</div><!--end featured-item-->
-<?php endif; ?>
 
 
 <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
@@ -54,6 +40,22 @@ we might have to rethink, or remove the background.</p>
 <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
 <?php endif; ?>
 
+<?php
+$recentItems = get_theme_option('Homepage Recent Items');
+if ($recentItems === null || $recentItems === ''):
+    $recentItems = 3;
+else:
+    $recentItems = (int) $recentItems;
+endif;
+if ($recentItems):
+?>
+
+<div id="recent-items">
+    <h2><?php echo __('Recently Added Items'); ?></h2>
+    <?php echo recent_items($recentItems); ?>
+    <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
+</div><!--end recent-items -->
+<?php endif; ?>
 
 <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
 

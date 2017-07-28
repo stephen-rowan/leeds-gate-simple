@@ -61,7 +61,7 @@
 
     body {
     font-family: "Cinzel", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 12px;
     line-height: 24px;
     word-wrap: break-word;
@@ -657,9 +657,26 @@ background-image: url("another-pale-blur-small.jpg");
     margin: 0 0 0.75em -16px;
     width: 100%;
   }
+  #content > div, #collection-content section {
+    border-radius: 25px;
+    background-color: #774e30;
+    border-style: solid;
+    border-width: 10px 0 0 0;
+    overflow: visible;
+    padding: 0.75em 16px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url("../javascripts/boxsizing.htc");
+    margin-bottom: 1.125em;
+    *zoom: 1;
+  }
   #content > div, #content section {
     border-radius: 25px;
-    background-color: #fff;
+    background-color: #dcdcdc;
     border-style: solid;
     border-width: 10px 0 0 0;
     overflow: visible;
@@ -1464,7 +1481,7 @@ background-image: url("another-pale-blur-small.jpg");
   /* !---------- Winter Styles ---------- */
   .winter body {
       background-color: #ffffff;
-    color: #5a5a5a;
+    color: #252525;
   }
   .winter h1, .winter #site-title a {
     color: #859ca2;
@@ -1520,10 +1537,10 @@ background-image: url("another-pale-blur-small.jpg");
   background-color: transparent;
   }
   .winter #home #content > div {
-    border-color: #4b6569;
+    border-color: #252525;
   }
   .winter #content > h1 {
-    color: #fff;
+    color: #000000;
   }
   .winter #content h2 {
     border-color: #dfe2e2;
