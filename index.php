@@ -8,11 +8,7 @@
 <!-- Featured Item -->
 <div id="featured-item">
 
-<p>A short bit of “Leeds GATE Archives is...” text goes here,
-so that people know at first glance what the site is I don’t think there ought to
-be any kind of border around it - it’s just a column with text in it.
-But if there’s any problems with it showing up against the background, 
-we might have to rethink, or remove the background.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies velit ut erat varius faucibus. Aliquam consectetur iaculis sagittis. Nam eleifend iaculis luctus. Pellentesque pellentesque nunc at risus pulvinar, sit amet faucibus urna consequat. Aliquam luctus fermentum tempor. Integer porta magna sit amet nulla cursus, molestie varius metus ultrices. Morbi tellus dolor, consequat ac felis at, congue suscipit ex. Nulla ac velit vitae urna condimentum pretium sed ac lectus.</p>
 
 
 </div><!--end featured-item-->
