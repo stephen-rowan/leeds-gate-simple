@@ -1,15 +1,16 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 
-<?php if (get_theme_option('Homepage Text')): ?>
-<p><?php echo get_theme_option('Homepage Text'); ?></p>
-<?php endif; ?>
 
 <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
+
 <!-- Featured Item -->
 <div id="featured-item">
+<p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies velit ut erat varius faucibus. Aliquam consectetur iaculis sagittis. Nam eleifend iaculis luctus. Pellentesque pellentesque nunc at risus pulvinar, sit amet faucibus urna consequat. Aliquam luctus fermentum tempor. Integer porta magna sit amet nulla cursus, molestie varius metus ultrices. Morbi tellus dolor, consequat ac felis at, congue suscipit ex. Nulla ac velit vitae urna condimentum pretium sed ac lectus.</p>
-
+<?php if (get_theme_option('Homepage Text')): ?>
+<?php echo get_theme_option('Homepage Text'); ?>
+<?php endif; ?>
+</p>
 
 </div><!--end featured-item-->
 <?php endif; ?>
@@ -29,8 +30,9 @@
 <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
 <!-- Featured Item -->
 <div id="featured-collection">
-    <h2><?php echo __('Featured item'); ?></h2>
-    <?php echo random_featured_items(1); ?>
+    <h2><?php echo __('Featured items'); ?></h2>
+   <center><?php echo random_featured_items(2); ?></center>
+   
 </div><!--end featured-item-->
 <?php endif; ?>
 
