@@ -11,35 +11,17 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 <li class="item record">
 
-    <h2><?php echo link_to_collection(); ?></h2>
+      
+<?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
 
+<h3><?php echo link_to_collection($collectionTitle); ?></h3>
+
+   
     <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
         <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
     <?php endif; ?>
     
-    <div class="collection-meta">
-
-    <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
-    <div class="collection-description">
-        <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?>
-    </div>
-    <?php endif; ?>
-
-    <?php if ($collection->hasContributor()): ?>
-    <div class="collection-contributors">
-        <p>
-        <strong><?php echo __('Contributors'); ?>:</strong>
-        <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
-        </p>
-    </div>
-    <?php endif; ?>
-
-    <p class="view-items-link"><?php echo link_to_items_browse(__('View the items in %s', metadata('collection', array('Dublin Core', 'Title'))), array('collection' => metadata('collection', 'id'))); ?></p>
-
-    <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
-
-    </div>
-
+    
 </li><!-- end class="collection" -->
 
 <?php endforeach; ?>

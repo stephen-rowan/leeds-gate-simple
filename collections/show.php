@@ -1,5 +1,5 @@
 <?php
-$collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 'Title')));
+$collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));
 ?>
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
@@ -7,9 +7,14 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
 <h1><?php echo $collectionTitle; ?></h1>
 
 
+<?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
 
 
-    <h2><?php echo link_to_items_browse(__('Items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></h2>
+<div class="item hentry">
+
+<h2><?php echo link_to_items_browse(__('View all items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></h2>
+    
+</div>    
     
     <ul class="flex-container">
   
@@ -57,6 +62,6 @@ $collectionTitle = strip_formatting(metadata('collection', array('Dublin Core', 
     
 
 
-<?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
+
 
 <?php echo foot(); ?>
