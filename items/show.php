@@ -338,7 +338,7 @@ top: 50%;
 <?php echo "<ul>" ?>
 <?php $files = $item->getFiles(); ?>
 <?php foreach ($files as $file){ ?>
-<?php echo "<li><div>x</div><img src='" . file_display_url($file, $format = 'thumbnail') . "'></li>"; ?> 
+<?php echo "<li><center><img src='" . file_display_url($file, $format = 'thumbnail') . "'></center></li>"; ?> 
 <?php } ?>
 <?php echo "</ul>" ?>
 <?php } else { ?>
