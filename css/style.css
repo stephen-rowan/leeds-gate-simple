@@ -90,32 +90,38 @@
 
   /* !---------- Headings ---------- */
   h1 {
+    font-family: "Cinzel", sans-serif;
     font-size: 32px;
     line-height: 48px;
   }
 
   h2 {
+    font-family: "Cinzel", sans-serif;
     font-size: 24px;
     line-height: 36px;
   }
 
   h3 {
+    font-family: "Cantarell Regular", sans-serif;
     font-size: 20px;
     line-height: 30px;
     font-weight: 500;
   }
 
   h4 {
+    font-family: "Cantarell Regular", sans-serif;
     font-size: 18px;
     line-height: 27px;
   }
 
   h5, h6 {
+    font-family: "Cantarell Regular", sans-serif;
     font-size: 16px;
     line-height: 24px;
   }
 
   p, ol, ul {
+    font-family: "Cantarell Regular", sans-serif;
     margin-bottom: 1.5em;
   }
 
@@ -725,7 +731,7 @@
 
   #content > div, #content section {
     border-radius: 25px;
-    background-color: #dcdcdc;
+    background-color: #ccc;
     border-style: solid;
     border-width: 10px 0 0 0;
     overflow: visible;
