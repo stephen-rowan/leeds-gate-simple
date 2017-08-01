@@ -23,6 +23,9 @@
 <!-- Browse our collections -->
 <div id="featured-collection">
     <h2>Browse our collections</h2>
+    
+    
+   
    
 </div><!-- end Browse our collections -->
 

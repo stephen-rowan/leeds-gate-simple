@@ -32,8 +32,8 @@
 <!-- Summary is the default tab -->
 
     <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Summary')" id="defaultOpen">Summary</a></li>
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Voices')">Gypsy and Traveller Voices</a></li>
     <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Details')">Details</a></li>
-    <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Images')">Images</a></li>
     <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Citation')">Citation</a></li>
 
 </ul>    
@@ -44,7 +44,18 @@
 
 <!--    ------------------------------------------------------------------------------------------------------- -->
 
-     <p>Title : <b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?></b></p>
+     <p>Desciption : <b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Description')); ?></b></p>
+
+
+</div>
+
+<!--    ------------------------------------------------------------------------------------------------------- -->
+
+<div id="Voices" class="tabcontent">
+
+<!--    ------------------------------------------------------------------------------------------------------- -->
+
+     <p>Voices : <b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Gypsy & Traveller voices')); ?></b></p>
 
 
 </div>
@@ -240,12 +251,6 @@
 </div>
 
 
-<div id="Images" class="tabcontent">
-     <h2>The thumbnails of image files :</h2>
-    <?php echo files_for_item(array('imageSize' => 'thumbnail')); ?>
-    <p>Some more text here.</p>
-
-</div>
 
 
 <div id="Citation" class="tabcontent">
