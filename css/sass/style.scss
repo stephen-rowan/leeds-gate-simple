@@ -45,7 +45,22 @@
    flex-wrap: wrap;
 }
 
+collection-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+   display: -moz-flex;
+   display: -webkit-flex;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+}
 
 .item.record {
    border-radius: 25px;	     
@@ -57,6 +72,19 @@
    clear:both;
    background: #eee;
                        }
+                       
+.collection.record {
+   border-radius: 25px;	     
+   width: 300px;
+   height: 150px;
+   margin-top: 30px;
+   text-align: center;
+   padding: 5px;
+   clear:both;
+   background: #eee;
+                       }
+                      
+                       
 
 
     body {
