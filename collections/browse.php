@@ -9,20 +9,24 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 <?php foreach (loop('collections') as $collection): ?>
 
-<li class="item record">
+<li class="collection record">
 
       
 <?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
 
-<h3><?php echo link_to_collection($collectionTitle); ?></h3>
+<h4><?php echo link_to_collection($collectionTitle); ?></h4>
 
-   
-    <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-        <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
-    <?php endif; ?>
+
+<?php $description = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));?>
+
+<p><?php echo $description; ?></p>
+
+  
+      
     
-    
-</li><!-- end class="collection" -->
+</li>
+
+<!-- end class="collection" -->
 
 <?php endforeach; ?>
 
