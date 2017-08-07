@@ -1,33 +1,104 @@
 <?php
 $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));
+$collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));
 ?>
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
+
+
+<aside id="sidebar">
+<div>
 <h1><?php echo $collectionTitle; ?></h1>
+<h3><?php echo $collectionDesc; ?></h3>
 
 
-<?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
+<?php $collectionId = metadata('collection', 'id'); ?> 
 
 
-<div class="item hentry">
+<?php $collectionTree = get_db()->getTable('CollectionTree')->getCollectionTree($collectionId); ?>
+<?php echo $this->CollectionTreeList($collectionTree); ?>
+</div>
+  
+</aside>
 
-<h2><?php echo link_to_items_browse(__('View all items in the %s Collection', $collectionTitle), array('collection' => metadata('collection', 'id'))); ?></h2>
+<ul class="flex-container">
+
+<?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
+
+<?php //echo metadata('collection', array('Leeds-GATE element set', 'GATE Title')); ?>
+<?php //echo "test"; ?>
+ 
+<?php 
+
+$collectionId = metadata('collection', 'id'); 
+
+
+
+function Leeds_GATE_get_child_collections($collectionId) {
+    if(plugin_is_active('CollectionTree')) {
+        $treeChildren = get_db()->getTable('CollectionTree')->getChildCollections($collectionId);
+        $childCollections = array();
+        foreach($treeChildren as $treeChild) {
+            
+           
+           echo '<li class="collection record">';
+           
+            $linkid = ($treeChild['id']);
+            $linktext = ($treeChild['name']);
+            echo "<a href='$linkid'>$linktext</a>";
+            
+            
+            //set_current_collection(get_collection_by_id($treechild['id']));
+            //echo metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
+            
+            
+            //$collectionTitle = metadata(($treeChild['name']), 'Title'); 
+            //echo $collectionTitle;
+            
+            echo '</li>';
+	  
+	
+	  //$childCollections[] = get_collection_by_id($treeChild['id']);
     
-</div>    
+        }
+        return $childCollections;
+    }
+    return array();
+}
+
+
+Leeds_GATE_get_child_collections($collectionId); 
+
+
+
+?>
+
+ 
+</ul>
+
+
+
+
+
+  <ul class="flex-container">
+
+
     
-    <ul class="flex-container">
+    
   
     
     <?php if (metadata('collection', 'total_items') > 0): ?>
     
-      
+    
+
+     
         <?php foreach (loop('items') as $item): ?>
         
         <li class="item record">
-        <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+        <?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
        
-       
+             
         <div class="item hentry">
             <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
 
@@ -41,7 +112,7 @@ $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE ele
             <div class="item-description">
                 <p><?php echo $text; ?></p>
             </div>
-            <?php elseif ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
+            <?php elseif ($description = metadata('item', array('Leeds-GATE element set', 'GATE Description'), array('snippet'=>250))): ?>
             <div class="item-description">
                 <?php echo $description; ?>
             </div>
@@ -50,16 +121,19 @@ $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE ele
         </div>
         
          </li>
+         
+        
         
         <?php endforeach; ?>
     <?php else: ?>
-        <p><?php echo __("There are currently no items within this collection."); ?></p>
+        <p><?php //echo __("There are currently no items within this collection."); ?></p>
     <?php endif; ?>
    
-    </ul>
+   
     
     
-    
+  </ul>
+
 
 
 
