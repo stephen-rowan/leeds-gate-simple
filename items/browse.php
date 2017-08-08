@@ -9,37 +9,26 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 <ul class="flex-container">
 
 <?php foreach (loop('items') as $item): ?>
-  
+
 <li class="item record">
 
-<h4><?php echo link_to_item(metadata('item', array('Leeds-GATE element set', 'GATE Title')), array('class'=>'permalink')); ?></h4>
+<div><?php echo link_to_item(metadata('item', array('Leeds-GATE element set', 'GATE Title')), array('class'=>'permalink')); ?></div>
 
-<div class="item-meta">
+<?php //echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?>
 
-    <?php if (metadata('item', 'has thumbnail')): ?>
+<?php if (metadata('item', 'has thumbnail')): ?>
 
-<div class="item-img">
-      <?php echo link_to_item(item_image('thumbnail')); ?>
-    </div>
+<?php //echo link_to_item(item_image('fullsize')); ?>
+  <div class="item-img">
+<?php echo link_to_item(item_image('fullsize')); ?>
+</div>
 
 <?php endif; ?>
 
-    <?php if ($description = metadata('item', array('Leeds-GATE element set', 'GATE Name of Creator'), array('snippet'=>250))): ?>
-    <div class="item-description">
-    <?php echo $description; ?>
-    </div>
-    <?php endif; ?>
 
-    <?php if (metadata('item', 'has tags')): ?>
-    <div class="tags"><p><strong><?php echo __('Tags'); ?>:</strong>
-        <?php echo tag_string('items'); ?></p>
-    </div>
+<?php //fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
 
-    <?php endif; ?>
-
-    <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-
-    </div><!-- end class="item-meta" -->
+    
 
 </li><!-- end class="item hentry" -->
 

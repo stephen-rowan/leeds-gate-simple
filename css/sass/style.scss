@@ -45,6 +45,13 @@
    flex-wrap: wrap;
 }
 
+header div img { 
+  width: 100%; 
+  height: auto; 
+    
+}
+
+
 collection-container {
   padding: 0;
   margin: 0;
@@ -65,13 +72,39 @@ collection-container {
 .item.record {
    border-radius: 25px;	     
    width: 200px;
-   height: 150px;
+   height: 300px;
    margin-top: 30px;
    text-align: center;
    padding: 5px;
    clear:both;
    background: #eee;
+   
+   a {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(100% - 4px);
+  margin-right: 8px;
+  text-decoration: none;
+  color: black;
+  }
+   
+   
+  img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  }
+  
+  a:hover img {
+  transform: scale(1.15);
+}
+ 
                        }
+         
+                 
+                       
                        
 .collection.record {
    border-radius: 25px;	     
@@ -96,12 +129,14 @@ collection-container {
     height: 100%;
 
 background-image: url("another-pale-blur-small.jpg");
+background-size: 100% 100%;
+background-repeat: no-repeat;
 
 }
 
   a {
     text-decoration: none;
-  }
+   }
 
   #skipnav {
     border: 0;
@@ -302,6 +337,16 @@ background-image: url("another-pale-blur-small.jpg");
 
   .gm-style {
     word-wrap: normal;
+  }
+  
+ div.relative {
+  position: relative;
+  
+  }
+  
+ div.absolute {
+  position: absolute;
+  
   }
 
   .image {
@@ -1066,9 +1111,9 @@ background-image: url("another-pale-blur-small.jpg");
   }
 
   .item img {
-    height: 4.5em;
+    height: auto;
     width: auto;
-    float: left;
+    float: center;
     margin: 0 0.75em 0.75em 0;
   }
 
@@ -2481,8 +2526,8 @@ background-image: url("another-pale-blur-small.jpg");
   }
   #home #content #featured-item {
     margin-bottom: 1.5em;
-    width: 32.20339%;
-    float: left;
+    width: 80%;
+    float: right;
     margin-right: 1.69492%;
     display: inline;
   }
@@ -2496,7 +2541,7 @@ background-image: url("another-pale-blur-small.jpg");
     height: auto;
   }
   #home #content > div {
-    width: 66.10169%;
+    width: 50%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;

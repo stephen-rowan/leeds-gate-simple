@@ -100,23 +100,15 @@ Leeds_GATE_get_child_collections($collectionId);
        
              
         <div class="item hentry">
-            <h3><?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?></h3>
+            <?php echo link_to_item($itemTitle, array('class'=>'permalink')); ?>
 
             <?php if (metadata('item', 'has thumbnail')): ?>
             <div class="item-img">
-                <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+                <?php echo link_to_item(item_image('fullsize', array('alt' => $itemTitle))); ?>
             </div>
             <?php endif; ?>
 
-            <?php if ($text = metadata('item', array('Item Type Metadata', 'Text'), array('snippet'=>250))): ?>
-            <div class="item-description">
-                <p><?php echo $text; ?></p>
-            </div>
-            <?php elseif ($description = metadata('item', array('Leeds-GATE element set', 'GATE Description'), array('snippet'=>250))): ?>
-            <div class="item-description">
-                <?php echo $description; ?>
-            </div>
-            <?php endif; ?>
+            
             
         </div>
         
