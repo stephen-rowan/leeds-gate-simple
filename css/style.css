@@ -792,7 +792,7 @@
   #content > div, #content section {
     border-radius: 25px;
     background-color: #ccc;
-    border-style: solid;
+    border-style: none;
     border-width: 10px 0 0 0;
     overflow: visible;
     padding: 0.75em 16px;
@@ -1128,6 +1128,26 @@
 
   #home #recent-items h2 {
     padding-bottom: 0.75em;
+  }
+
+  #home #content #featured-item {
+    background: #AE7259;
+    color: white;
+  }
+
+  #home #content #browse-our-collections {
+    background: #512A20;
+    color: white;
+  }
+
+  #home #content #featured-collection {
+    background: #83B16A;
+    color: white;
+  }
+
+  #home #content #featured-exhibit {
+    background: #CEAD25;
+    color: white;
   }
 
   /* !---------- Items ---------- */
@@ -2925,12 +2945,23 @@
     margin: 0;
   }
 
-  #home #content #featured-item {
+  #home #content #home-page-text {
     margin-bottom: 1.5em;
-    width: 80%;
-    float: right;
-    margin-right: 1.69492%;
+    width: 40%;
+    float: left;
+    margin-left: 1.69492%;
     display: inline;
+  }
+
+  #home #content #featured-item {
+    width: 50%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    background: #AE7259;
+    color: white;
   }
 
   #home #content #featured-item .image {
@@ -2946,10 +2977,44 @@
 
   #home #content > div {
     width: 50%;
+    clear: right;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline;
+  }
+
+  #home #content #browse-our-collections {
+    width: 50%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    background: #512A20;
+    color: white;
+  }
+
+  #home #content #featured-collection {
+    width: 50%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    background: #83B16A;
+    color: white;
+  }
+
+  #home #content #featured-exhibit {
+    width: 50%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+    *margin-left: -1em;
+    display: inline;
+    background: #CEAD25;
+    color: white;
   }
 
   /* !---------- Items --------- */
@@ -2959,7 +3024,7 @@
 
   .items #advanced-search-form > div {
     width: 61.53846%;
-    float: left;
+    float: right;
     margin-right: 2.5641%;
     display: inline;
     clear: both;
