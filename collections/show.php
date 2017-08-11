@@ -3,14 +3,37 @@ $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE ele
 $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));
 ?>
 
+<?php function get_collection_image($id){
+		$collectionImages=array(
+            4=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
+   			5=>WEB_ROOT.'/themes/simple/images/Leeds-Trav-Ed.png', // collection 1
+   			6=>WEB_ROOT.'/themes/simple/images/Rob-Martin.png', // collection 1
+   			7=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Member.png', // collection 1
+   			8=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Photo.png', // collection 1
+   			10=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Bio.png', // collection 1
+					);
+		if(isset($collectionImages[$id])){
+            echo "<a href=\"\"><img src=\"$collectionImages[$id]\"  /></a>";
+            return $collectionImages[$id];
+		}else{
+			$fallbackImage=WEB_ROOT.'/themes/simple/images/default.png'; //fallback
+            echo "<a href=\"\"><img src=\"$fallbackImage\"  /></a>";
+            return $fallbackImage;
+
+		}
+}
+?>
+
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
 
 
 <aside id="sidebar">
 <div>
-<h1><?php echo $collectionTitle; ?></h1>
+<center><?php get_collection_image(metadata('collection', 'id')) ?></center>
 <h3><?php echo $collectionDesc; ?></h3>
+
+
 
 
 <?php $collectionId = metadata('collection', 'id'); ?> 

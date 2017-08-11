@@ -3,6 +3,28 @@ $pageTitle = __('Browse our collections');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
 
+<?php function get_collection_image($id){
+		$collectionImages=array(
+   			4=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
+   			5=>WEB_ROOT.'/themes/simple/images/Leeds-Trav-Ed.png', // collection 1
+   			6=>WEB_ROOT.'/themes/simple/images/Rob-Martin.png', // collection 1
+   			7=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Member.png', // collection 1
+   			8=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Photo.png', // collection 1
+   			10=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Bio.png', // collection 1
+		);
+		if(isset($collectionImages[$id])){
+            echo "<a href=\"show/$id\"><img src=\"$collectionImages[$id]\"  /></a>";
+            return $collectionImages[$id];
+		}else{
+			$fallbackImage=WEB_ROOT.'/themes/simple/images/default.png'; //fallback
+            echo "<a href=\"show/$id\"><img src=\"$fallbackImage\"  /></a>";
+            return $fallbackImage;
+
+		}
+}
+?>
+
+
 <h1><?php echo $pageTitle; ?></h1>
 
 <ul class="flex-container">
@@ -14,12 +36,13 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
       
 <?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
 
-<h4><?php echo link_to_collection($collectionTitle); ?></h4>
+<h4><?php //echo link_to_collection($collectionTitle); ?></h4>
 
+<img><?php get_collection_image(metadata('collection', 'id')) ?></img>
 
 <?php $description = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));?>
 
-<p><?php echo $description; ?></p>
+<p><?php //echo $description; ?></p>
 
   
       
