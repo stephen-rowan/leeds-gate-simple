@@ -5,12 +5,12 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 
 <?php function get_collection_image($id){
 		$collectionImages=array(
-            4=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
-   			5=>WEB_ROOT.'/themes/simple/images/Leeds-Trav-Ed.png', // collection 1
-   			6=>WEB_ROOT.'/themes/simple/images/Rob-Martin.png', // collection 1
-   			7=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Member.png', // collection 1
-   			8=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Photo.png', // collection 1
-   			10=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Bio.png', // collection 1
+           	5=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
+   			1=>WEB_ROOT.'/themes/simple/images/Leeds-Trav-Ed.png', // collection 1
+   			3=>WEB_ROOT.'/themes/simple/images/Rob-Martin.png', // collection 1
+   			2=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Member.png', // collection 1
+   			4=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Photo.png', // collection 1
+   			8=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Bio.png', // collection 1
 					);
 		if(isset($collectionImages[$id])){
             echo "<a href=\"\"><img src=\"$collectionImages[$id]\"  /></a>";
