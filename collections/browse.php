@@ -19,7 +19,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 			$fallbackImage=WEB_ROOT.'/themes/simple/images/default.png'; //fallback
             echo "<a href=\"show/$id\"><img src=\"$fallbackImage\"  /></a>";
             return $fallbackImage;
-
 		}
 }
 ?>
@@ -29,20 +28,29 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 <ul class="flex-container">
 
-<?php foreach (loop('collections') as $collection): ?>
+    <?php foreach (loop('collections') as $collection): ?>
 
-<li class="collection record">
+	<li class="collection record">
 
-      
-<?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
+	    
+	    <?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
 
-<h4><?php //echo link_to_collection($collectionTitle); ?></h4>
+	    <?php //echo metadata('collection', 'id') ?>
+	    <?php //echo metadata('collection', array('Leeds-GATE element set', 'GATE Title')) ?>
 
-<img><?php get_collection_image(metadata('collection', 'id')) ?></img>
+	    <h4><?php //echo link_to_collection($collectionTitle); ?></h4>
 
-<?php $description = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));?>
+	    <img>
+	    <?php
+	    $linkid = metadata('collection', 'id');
+	    $linktext = metadata('collection', array('Leeds-GATE element set', 'GATE Reference code'));
+	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
+	    echo "<a href=\collections/show/$linkid><img src=\"$root\"  /></a>";
+	    ?>
+            </img>
 
-<p><?php //echo $description; ?></p>
+    <?php //$description = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));?>
+    <?php //echo $description; ?>
 
   
       

@@ -19,7 +19,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 <?php if (metadata('item', 'has thumbnail')): ?>
 
 <?php //echo link_to_item(item_image('fullsize')); ?>
-  <div class="item-img">
+  <div class="img">
 <?php echo link_to_item(item_image('fullsize')); ?>
 </div>
 
