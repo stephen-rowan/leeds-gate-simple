@@ -45,8 +45,6 @@ function Leeds_GATE_get_child_collections($collectionId) {
 
 <?php
 
-# BUG : Fairground.png does not display for some reason !!
-
 function Leeds_GATE_get_child_collections_images($collectionId) {
     if(plugin_is_active('CollectionTree')) {
 	$treeChildren = get_db()->getTable('CollectionTree')->getChildCollections($collectionId);
@@ -66,7 +64,8 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 	    echo '<div class="img">';
 	    
 	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
-	    echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
+	    echo "<a href=\"$linkid\"><img src=\"$root\"  </img></a>";
+	    //echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
 	    
 	    echo $linktext;
 

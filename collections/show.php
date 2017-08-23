@@ -78,8 +78,6 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
     
     <?php 
 
-    # BUG : Fairground.png does not display for some reason !!
-    
     $collectionId = metadata('collection', 'id'); 
     Leeds_GATE_get_child_collections_images($collectionId); 
 
@@ -101,14 +99,14 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
             <li class="item record">
      		<?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
 		
-	 		<?php if (metadata('item', 'has thumbnail')): ?>
+	 	<?php if (metadata('item', 'has thumbnail')): ?>
 		    
 		    <div class="img">
 			<?php echo link_to_item(item_image('fullsize', array('alt' => $itemTitle))); ?>
 		    </div>
 		<?php endif; ?>
 
-	           </li>
+	    </li>
             
             
             
