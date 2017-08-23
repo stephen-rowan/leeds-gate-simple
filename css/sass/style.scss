@@ -102,20 +102,24 @@ collection-container {
 }
  
                        }
-         
-                 
-                       
-                       
-.collection.record {
-   border-radius: 25px;	     
-   width: 300px;
-   height: 150px;
-   margin-top: 30px;
-   text-align: center;
-   padding: 5px;
-   clear:both;
-   background: #512A20;
-                       }
+    
+    
+    
+    
+    .collection.record {
+	border-radius: 25px;	     
+	width: 300px;
+	height: 150px;
+	margin-top: 20px;
+	text-align: center;
+	//padding: 5px;
+	clear:both;
+	//background: #512A20;
+
+	a:hover img {
+	    transform: scale(1.15);
+	}
+    }
                       
              
 

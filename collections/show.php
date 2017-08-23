@@ -3,36 +3,15 @@ $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE ele
 $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Description')));
 ?>
 
-<?php function get_collection_image($id){
-    $collectionImages=array(
-        5=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
-   	1=>WEB_ROOT.'/themes/simple/images/Leeds-Trav-Ed.png', // collection 1
-   	3=>WEB_ROOT.'/themes/simple/images/Rob-Martin.png', // collection 1
-   	2=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Member.png', // collection 1
-   	4=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Photo.png', // collection 1
-   	8=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Bio.png', // collection 1
-	9=>WEB_ROOT.'/themes/simple/images/Leeds-GATE-Bio.png', // collection 1
-    );
-    if(isset($collectionImages[$id])){
-        echo "<a href=\"$id\"><img src=\"$collectionImages[$id]\"  /></a>";
-        return $collectionImages[$id];
-    }else{
-	$fallbackImage=WEB_ROOT.'/themes/simple/images/default.png'; //fallback
-	echo "<a href=\"\"><img src=\"$fallbackImage\"  /></a>";
-        return $fallbackImage;
-
-    }
-}
-?>
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
 
 
-
-
-
 <aside id="sidebar">
+
+    <!-- Collection image -->
+    
     <div>
 	<center>
 	    <?php
@@ -42,99 +21,94 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 	    echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
 	    ?>	
 	</center>
+
+    </div>
+
+    <div>
+	
+	<!-- Collection metadata details -->
+	
+	<?php
+
+	if (metadata('collection', array('Leeds-GATE element set','GATE Description'))): ?>
+	    <p><b>Description :</b> <?php echo metadata('collection', array('Leeds-GATE element set', 'GATE Description')); ?></p>
+	<?php endif; ?>
 	
 
+	<?php
+
+	if (metadata('collection', array('Leeds-GATE element set','GATE Immediate source of acquisition or transfer'))): ?> 
+	    <p><b>Immediate source of acquisition or transfer :</b> <?php echo metadata('collection', array('Leeds-GATE element set', 'GATE Immediate source of acquisition or transfer')); ?></p>
+	<?php endif; ?>
+
+	<?php
+
+	if (metadata('collection', array('Leeds-GATE element set','GATE Current location'))): ?> 
+	    <p><b>Current location :</b> <?php echo metadata('collection', array('Leeds-GATE element set', 'GATE Current location')); ?></p>
+	<?php endif; ?>
+
+
+	<!-- CollectionTree data -->
+
+	<?php
+	$collectionId = metadata('collection', 'id');
+	$collectionTree = get_db()->getTable('CollectionTree')->getCollectionTree($collectionId);
+	echo $this->CollectionTreeList($collectionTree);
+	?>
+
+	<!-- Leeds_GATE_get_child_collections() function -->
 	
-	<h3><?php echo $collectionDesc; ?></h3>
+	<?php
 
-	<?php $collectionId = metadata('collection', 'id'); ?> 
-
-	<?php $collectionTree = get_db()->getTable('CollectionTree')->getCollectionTree($collectionId); ?>
-	<?php echo $this->CollectionTreeList($collectionTree); ?>
+	# BUG : This function conflicts with Leeds_GATE_get_child_collections_images
+	
+	#$collectionId = metadata('collection', 'id');
+	#Leeds_GATE_get_child_collections($collectionId); 
+	?>
+	
     </div>
     
 </aside>
 
 <ul class="flex-container">
 
-    <?php $collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
 
+    <!-- Call to Leeds_GATE_get_child_collections_images() function : retrieves images for sub collections -->
+    <!-- See this themes Custom.php for details-->
+    
     <?php 
 
-    function Leeds_GATE_get_child_collections($collectionId) {
-	if(plugin_is_active('CollectionTree')) {
-            $treeChildren = get_db()->getTable('CollectionTree')->getChildCollections($collectionId);
-            $childCollections = array();
-            foreach($treeChildren as $treeChild) {
-		
-		echo '<li class="collection record">';
-		
-		$linkid = ($treeChild['id']);
-		
-		set_current_record('collection', get_record_by_id('collection', $linkid));
-
-		$linktext = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
-
-		echo "<a href='$linkid'>$linktext</a>";
-
-		echo '<div class="img">';
-		
-		$root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
-		echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
-		
-
-		echo '</div>';
-		echo '</li>';
-		
-            }
-            return $childCollections;
-
-	}
-	return array();
-    }
-
+    # BUG : Fairground.png does not display for some reason !!
+    
     $collectionId = metadata('collection', 'id'); 
-    Leeds_GATE_get_child_collections($collectionId); 
+    Leeds_GATE_get_child_collections_images($collectionId); 
 
     ?>
-
     
 </ul>
 
 
-
-
-
 <ul class="flex-container">
-
-
     
-    
-    
+    <!-- Returns items for collection if they exist -->
+    <!-- Note : if the CollectionTree plugin is set to show sub-collection items - top-level collection will display all items here. -->
     
     <?php if (metadata('collection', 'total_items') > 0): ?>
 	
 	
-
-	
         <?php foreach (loop('items') as $item): ?>
             
             <li class="item record">
-		<?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
+     		<?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
 		
-		<?php //echo link_to_item($itemTitle, array('class'=>'permalink')); ?>
-
-		<?php if (metadata('item', 'has thumbnail')): ?>
+	 		<?php if (metadata('item', 'has thumbnail')): ?>
 		    
 		    <div class="img">
 			<?php echo link_to_item(item_image('fullsize', array('alt' => $itemTitle))); ?>
 		    </div>
 		<?php endif; ?>
 
-		
-		
-		
-            </li>
+	           </li>
             
             
             
@@ -147,8 +121,6 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
     
     
 </ul>
-
-
 
 
 
