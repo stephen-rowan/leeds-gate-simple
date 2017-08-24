@@ -1,31 +1,36 @@
 @media screen {
   /*
-  Table of Contents
-  =================
-  -- General HTML Elements
-  ----- Headings
-  ----- Form Elements
-  -- Global Classes
-  -- Navigation
-  ----- Pagination
-  -- Header
-  -- Footer
-  -- Content
-  -- Home
-  -- Items
-  -- Search
-  ----- Advanced Search
-  -- Files
-  -- Collections
-  -- ExhibitBuilder
-  -- Simple Pages
-  -- Winter Styles
-  -- Spring Styles
-  -- Summer Styles
-  -- Autumn Styles
-  -- Night Styles
-  */
+     Table of Contents
+     =================
+     -- General HTML Elements
+     ----- Headings
+     ----- Form Elements
+     -- Global Classes
+     -- Navigation
+     ----- Pagination
+     -- Header
+     -- Footer
+     -- Content
+     -- Home
+     -- Items
+     -- Search
+     ----- Advanced Search
+     -- Files
+     -- Collections
+     -- ExhibitBuilder
+     -- Simple Pages
+     -- Winter Styles
+     -- Spring Styles
+     -- Summer Styles
+     -- Autumn Styles
+     -- Night Styles
+   */
   /* !---------- General HTML Elements ---------- */
+  #header-logo img {
+    width: 100%;
+    height: auto;
+  }
+
   .flex-container {
     padding: 0;
     margin: 0;
@@ -40,11 +45,6 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-  }
-
-  header div img {
-    width: 100%;
-    height: auto;
   }
 
   collection-container {
@@ -570,7 +570,7 @@
     float: left;
   }
 
-  /* !---------- Header ---------- */
+  /* !---------- Header---------- */
   #site-title {
     font-size: 32px;
     line-height: 48px;
@@ -731,7 +731,7 @@
   }
 
   footer p {
-    padding-bottom: 1.5em;
+    padding-bottom: 0em;
   }
 
   footer:empty {
@@ -1921,7 +1921,7 @@
   }
 
   .winter footer {
-    background-color: #2f3e4a;
+    background-color: transparent;
   }
 
   .winter footer p {
@@ -2713,19 +2713,24 @@
 }
 @media screen and (min-width: 768px) {
   /*
-  Table of Contents
-  =================
-  -- Header
-  -- Navigation
-  ----- Pagination
-  -- Search
-  -- Content
-  -- Home
-  -- Items
-  -- Collections
-  -- ExhibitBuilder
-  */
+     Table of Contents
+     =================
+     -- Header
+     -- Navigation
+     ----- Pagination
+     -- Search
+     -- Content
+     -- Home
+     -- Items
+     -- Collections
+     -- ExhibitBuilder
+   */
   /* !---------- Header ---------- */
+  #header-logo img {
+    width: 100%;
+    height: auto;
+  }
+
   header {
     *zoom: 1;
   }

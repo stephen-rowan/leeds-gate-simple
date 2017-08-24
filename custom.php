@@ -80,3 +80,18 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 }
 
 ?>
+
+
+
+<?php 
+
+function Leeds_GATE_logo() {
+
+    $leedsgateimage = WEB_ROOT.'/themes/simple/images/leedsgate.jpg';
+    $leedsgatelink = 'http://leedsgate.co.uk/';
+    echo "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
+    //return "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
+
+}
+
+?>

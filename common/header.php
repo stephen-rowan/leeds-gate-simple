@@ -45,29 +45,21 @@
     )); 
     ?>
 
-    
     <?php echo head_js(); ?>
-
-    <!-- BUG Temporary fix for dynamic re-sizing of logo image - this re-sizes all img elements at present -->
-    <!-- Need to find and amend setting in SASS/CSS -->
-
-    <style>
-     img {
-	 width: 100%;
-	 height: auto;
-     }
-    </style>
-    
+            
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+
 <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
+
 <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+
+
 
 <div id="wrap">
 
-    <div id="header div img"><?php echo link_to_home_page(theme_logo()); ?></div>
-
- 
+    <div id="header-logo"><?php echo link_to_home_page(theme_logo()); ?></div>
+    
     
     <nav id="top-nav" class="top" role="navigation">
         <?php echo public_nav_main(); ?>

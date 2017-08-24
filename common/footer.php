@@ -9,15 +9,27 @@
             <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
                 <p><?php echo $copyright; ?></p>
             <?php endif; ?>
-        </div>
 
-        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
 
-    <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
+	    <div align="right">
+		<?php
+		Leeds_GATE_logo();
+		?>
+	    </div>
+
+	    
+            </div>
+
+            <p><?php //echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
+
+
+
+
+	    <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 
 </footer>
 
-</div><!--end wrap-->
+	</div><!--end wrap-->
 
 <script type="text/javascript">
 jQuery(document).ready(function () {
