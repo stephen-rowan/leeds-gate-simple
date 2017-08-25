@@ -12,7 +12,7 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 
     <!-- Collection image -->
     
-    <div>
+    <div id="header-logo">
 	<center>
 	    <?php
 	    $linkid = metadata('collection', 'id');
