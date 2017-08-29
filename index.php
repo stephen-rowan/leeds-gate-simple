@@ -3,15 +3,9 @@
 
 <div id="home-page-text">
 <?php if (get_theme_option('Homepage Text')): ?>
-<h3><?php echo get_theme_option('Homepage Text'); ?></h3>
+<?php echo get_theme_option('Homepage Text'); ?>
 <?php endif; ?>
 </div>
-
-<!-- Browse our collections -->
-<div id="browse-our-collections">
-<h3><a href="/collections/browse/">Browse our collections</a></h3>
-
-</div><!-- end Browse our collections -->
 
 
 <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
@@ -26,21 +20,21 @@
 
 
 <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
-<!-- Featured Collection -->
-<div id="featured-collection">
-    <h3><?php echo __('Featured Collection'); ?></h3>
-    <?php echo random_featured_collection(); ?>
-</div><!-- end featured collection -->
+    <!-- Featured Collection -->
+    <div id="featured-collection">
+	<h3><?php echo __('Featured Collection'); ?></h3>
+	<?php echo random_featured_collection(); ?>
+    </div><!-- end featured collection -->
 <?php endif; ?>
 
 <?php if ((get_theme_option('Display Featured Exhibit') !== '0')
-        && plugin_is_active('ExhibitBuilder')
-        && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
-<!-- Featured Exhibit -->
-<div id="featured-exhibit">
-<h3><?php echo exhibit_builder_display_random_featured_exhibit(); ?></h3>
+          && plugin_is_active('ExhibitBuilder')
+          && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
+    <!-- Featured Exhibit -->
+    <div id="featured-exhibit">
+    <h3><?php echo exhibit_builder_display_random_featured_exhibit(); ?></h3>
 <?php endif; ?>
-</div>
+    </div>
 
 <?php echo foot(); ?>
 

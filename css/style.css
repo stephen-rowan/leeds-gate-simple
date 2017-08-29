@@ -65,8 +65,8 @@
 
   .item.record {
     border-radius: 20px;
-    width: 190px;
-    height: 190px;
+    width: 100px;
+    height: 100px;
     margin-top: 20px;
     text-align: center;
     padding: 5px;
@@ -94,11 +94,26 @@
 
   .collection.record {
     border-radius: 25px;
-    width: 300px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     margin-top: 20px;
     text-align: center;
     clear: both;
+  }
+  .collection.record a {
+    display: inline-block;
+    margin-bottom: 8px;
+    width: 100%;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+  }
+  .collection.record img {
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    background: #ccc;
   }
   .collection.record a:hover img {
     transform: scale(1.15);
@@ -111,9 +126,6 @@
     line-height: 24px;
     word-wrap: break-word;
     height: 100%;
-    background-image: url("another-pale-blur-small.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
   }
 
   a {
@@ -579,8 +591,7 @@
   }
 
   #search-container {
-    padding: 0 16px 1.5em;
-    border-radius: 25px;
+    padding: 5px;
   }
 
   #search-container:after {
@@ -1071,7 +1082,6 @@
   #home #content div h3 {
     margin-top: 0;
     font-weight: 300;
-    text-transform: uppercase;
   }
 
   #home #content div img {
@@ -1463,20 +1473,12 @@
     clear: both;
   }
 
-  .exhibits #content .navigation .current, .exhibits #content .navigation .active {
-    font-weight: 500;
-  }
-
   .exhibits #content .primary {
     padding-bottom: 0;
   }
 
   .exhibits .exhibit {
     clear: both;
-  }
-
-  .exhibits .exhibit-page {
-    font-weight: bold;
   }
 
   .exhibits.summary #content #primary > div {
@@ -1513,10 +1515,6 @@
 
   .exhibits #exhibit-pages.top li {
     max-width: 40%;
-  }
-
-  .exhibits.show #content h1 {
-    font-size: 32px;
   }
 
   .exhibits.show #content #primary:first-child {
@@ -1737,7 +1735,7 @@
 
   /* !---------- Winter Styles ---------- */
   .winter body {
-    background-color: #ffffff;
+    background-color: #bdc5b8;
     color: #252525;
   }
 
@@ -1912,7 +1910,7 @@
   }
 
   .winter footer {
-    background-color: transparent;
+    background-color: #ccc;
   }
 
   .winter footer p {
@@ -2765,6 +2763,8 @@
   }
 
   nav.top .nav-menu {
+    width: 60%;
+    background: #ccc;
     display: block;
     position: relative;
     list-style: none;
@@ -2828,7 +2828,7 @@
   }
 
   nav.top .sub-nav ul a:before {
-    font-family: "FontAwesome";
+    font-family: "Cinzel", sans-serif;
     content: "\f101";
     margin-right: .5em;
   }
@@ -2850,7 +2850,7 @@
   }
 
   nav.top [aria-haspopup="true"]:after {
-    font-family: "FontAwesome";
+    font-family: "Cinzel", sans-serif;
     content: "\f0da";
     margin-left: .5em;
   }
@@ -2933,7 +2933,7 @@
 
   /* !---------- Home ---------- */
   #home #content #intro {
-    font-size: 24px;
+    font-size: 17px;
     line-height: 36px;
     margin-bottom: 1.125em;
   }
@@ -2943,7 +2943,10 @@
   }
 
   #home #content #home-page-text {
+    font: Cantarell Regular;
+    font-size: 15px;
     margin-bottom: 1.5em;
+    background-color: Transparent;
     width: 40%;
     float: left;
     margin-left: 1.69492%;
@@ -2952,6 +2955,7 @@
 
   #home #content #featured-item {
     width: 50%;
+    height: 33%;
     clear: right;
     float: right;
     margin-right: 0;
@@ -2994,6 +2998,7 @@
 
   #home #content #featured-collection {
     width: 50%;
+    height: 33%;
     clear: right;
     float: right;
     margin-right: 0;
@@ -3005,6 +3010,7 @@
 
   #home #content #featured-exhibit {
     width: 50%;
+    height: 33%;
     clear: right;
     float: right;
     margin-right: 0;
