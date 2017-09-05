@@ -334,11 +334,12 @@
 	    $publication = option('site_title');
 	    $url = WEB_ROOT.'/items/show/'.$item->id;
 	    $title = metadata('item', array('Leeds-GATE element set','GATE Title'));
+	    $reference_code = metadata('item', array('Leeds-GATE element set','GATE Reference code'));
 	    $today = date("F j, Y");
-	    $citation = $title.'. <em>'.$publication.'</em>, accessed '.$today.', '.$url;
+	    $citation = $title.'. Ref: '.$reference_code.'. <em>'.$publication.'</em>, accessed '.$today.', '.$url;
 	    echo $citation;
 	    //echo $item->id;
-	     ?>
+	    ?>
 
 	    
 	</p>
