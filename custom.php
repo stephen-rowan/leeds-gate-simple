@@ -1,39 +1,3 @@
-<?php function xcollectionTreeList()
-{
-if (!$collectionTree) {
-return;
-}
-
-$collectionTable = get_db()->getTable('Collection');
-//$html = '<ul class="flex-container">';
-    $html = '';
-    foreach ($collectionTree as $collection) {
-    
-    // No link to current collection.
-    if ($linkToCollectionShow && !isset($collection['current']) && isset($collection['id'])) {
-    //$html .= '<li class="item record">';
-    //$html .= '<li>';
-    $html .= link_to_collection(null, array(), 'show', $collectionTable->find($collection['id']));
-    
-    }
-    // No link to private parent collection.
-    elseif (!isset($collection['id'])) {
-    $html .= __('[Unavailable]');
-    }
-    // Link to current collection.
-    else {
-    $html .= empty($collection['name']) ? __('[Untitled]') : $collection['name'];
-    }
-    //$html .= $this->collectionTreeList($collection['children'], $linkToCollectionShow);
-    //$html .= '</li>';
-    }
-    //$html .= '</ul>';
-    return $html;
-    }
-
-?>
-
-
 <?php function get_collection_image($id){
     $collectionImages=array(
    	5=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1

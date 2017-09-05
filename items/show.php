@@ -37,12 +37,11 @@
 
 </style>
 
+
 <ul class="item-pagination navigation">
     <li id="previous-item" class="previous"><?php echo link_to_previous_item_show(); ?></li>
     <li id="next-item" class="next"><?php echo link_to_next_item_show(); ?></li>
 </ul>
-
-
 
 <div>
     <ul class="breadcrumb">
@@ -68,16 +67,23 @@
 
 	<?php endif; ?>
 
-	<?php 
-	
+	<?php
+	set_current_record('collection', get_record_by_id('collection', $collection_id));
+	$collection_title = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
+		
 	echo "<li><a href=\"$collection_link_address\"/>";
-	echo $collection_name;
+	echo $collection_title;
 	echo "</a></li>";
 	?>
 	<li> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?></li>
     </ul>
 
+  
+    
 </div>
+
+
+
 
 
 <?php //echo "<div><h2>".metadata('item', array('Leeds-GATE element set', 'GATE Title'))."</h2></div>"; ?>

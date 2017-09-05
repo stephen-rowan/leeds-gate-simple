@@ -53,11 +53,10 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<!-- Add font awesome icons -->
-
+		
+		<a href="https://twitter.com/GATEArchive" i class="fa fa-twitter"></a>
 		<a href="https://www.facebook.com/LeedsGATE/" i class="fa fa-facebook"></a>
-		<a href="https://twitter.com/LeedsGATE" i class="fa fa-twitter"></a>
-
-
+		
 		<?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 	    </div>
 
