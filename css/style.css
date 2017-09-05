@@ -559,7 +559,7 @@
 
   .item-pagination li {
     display: inline-block;
-    background-color: #fff;
+    background-color: transparent;
     margin: 0 0 0.75em 0;
     padding: 0.375em 8px;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
@@ -774,8 +774,7 @@
   #content #sidebar > h2:first-child, #content #sidebar > div > h2:first-child {
     padding: 0 16px 0.375em;
     font-weight: 500;
-    border-style: solid;
-    margin: 0 0 0.75em -16px;
+    border-style: none;
     width: 100%;
   }
 
@@ -793,15 +792,14 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     *behavior: url("../javascripts/boxsizing.htc");
-    margin-bottom: 1.125em;
     *zoom: 1;
   }
 
   #content > div, #content section {
     border-radius: 25px;
-    background-color: #ccc;
+    background-color: transparent;
     border-style: none;
-    border-width: 10px 0 0 0;
+    border-width: 0 0 0 0;
     overflow: visible;
     padding: 0.75em 16px;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
@@ -817,12 +815,6 @@
 
   #content > div > *:only-child, #content section > *:only-child {
     margin-top: 0;
-  }
-
-  #content > div:after, #content section:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 
   #content .field {
@@ -1210,7 +1202,7 @@
   }
 
   .items.show #primary > div {
-    border-top-width: 10px;
+    background: #83B16A;
     border-top-style: solid;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
