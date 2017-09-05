@@ -70,7 +70,7 @@
 	<?php
 	set_current_record('collection', get_record_by_id('collection', $collection_id));
 	$collection_title = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
-		
+	
 	echo "<li><a href=\"$collection_link_address\"/>";
 	echo $collection_title;
 	echo "</a></li>";
@@ -78,7 +78,7 @@
 	<li> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?></li>
     </ul>
 
-  
+    
     
 </div>
 
@@ -325,7 +325,23 @@
 
 
     <div id="Citation" class="tabcontent">
-	<p><?php echo metadata('item', 'citation', array('no_escape' => true)); ?></p>
+
+	<p>
+	    <?php //my_custom_citation($item); ?>
+	    <?php //echo metadata('item', 'citation', array('no_escape' => true)); ?>
+
+	    <?php
+	    $publication = option('site_title');
+	    $url = WEB_ROOT.'/items/show/'.$item->id;
+	    $title = metadata('item', array('Leeds-GATE element set','GATE Title'));
+	    $today = date("F j, Y");
+	    $citation = $title.'. <em>'.$publication.'</em>, accessed '.$today.', '.$url;
+	    echo $citation;
+	    //echo $item->id;
+	     ?>
+
+	    
+	</p>
     </div>
 
 

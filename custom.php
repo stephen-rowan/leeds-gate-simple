@@ -1,3 +1,16 @@
+<?php function my_custom_citation($item){
+
+    $publication = option('site_title');
+    $url = WEB_ROOT.'/items/show/'.$item->id;
+    $title = metadata('item', array('Leeds-GATE element set','GATE Title'));
+    $today = date("F j, Y");
+    $citation = $title.'. <em>'.$publication.'</em>, accessed '.$today.', '.$url;
+    
+    return $citation;
+}
+
+?>
+
 <?php function get_collection_image($id){
     $collectionImages=array(
    	5=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
