@@ -1,5 +1,7 @@
 <?php function my_custom_citation($item){
 
+    //Unused
+
     $publication = option('site_title');
     $url = WEB_ROOT.'/items/show/'.$item->id;
     $title = metadata('item', array('Leeds-GATE element set','GATE Title'));
@@ -12,6 +14,9 @@
 ?>
 
 <?php function get_collection_image($id){
+
+    //Unused
+    
     $collectionImages=array(
    	5=>WEB_ROOT.'/themes/simple/images/Leeds-GATE.png', // collection 1
    	1=>WEB_ROOT.'/themes/simple/images/Leeds-Trav-Ed.png', // collection 1

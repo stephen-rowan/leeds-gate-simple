@@ -47,9 +47,30 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 
 <div>
     <ul class="breadcrumb">
-	<li><a href="#">Home</a></li>
-	<li><a href="#">Collection</a></li>
-	<li><a href="#">Collection</a></li>
+
+	<?php
+	$root = WEB_ROOT;
+	$collection_name = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
+	$collection_id = metadata('collection', 'id');
+	$collection_link_address = $root."/collections/browse/";
+	echo "<li><a href=\"$root\">Home</a></li>";
+	echo "<li><a href=\"$collection_link_address\">Our Collections</a></li>";
+	?>
+
+	
+	<?php $xyz = get_db()->getTable('CollectionTree')->getAncestorTree($collection_id);?>
+	<?php
+	echo "<li>";
+	echo $this->collectionTreeList($xyz);
+	echo "</li>";
+	?>
+
+	<?php 
+
+
+	
+	echo "<li>$collection_name</li>";
+	?>
 
     </ul>
 
@@ -129,8 +150,8 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
     
     <?php 
 
-    $collectionId = metadata('collection', 'id'); 
-    Leeds_GATE_get_child_collections_images($collectionId); 
+    //$collectionId = metadata('collection', 'id'); 
+    Leeds_GATE_get_child_collections_images($collection_id); 
 
     ?>
     
