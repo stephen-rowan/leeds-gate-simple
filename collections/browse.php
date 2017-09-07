@@ -1,10 +1,55 @@
 <?php
-$pageTitle = __('Browse our collections');
+$pageTitle = __('Our collections');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
 
+<style>
 
-<h1><?php echo $pageTitle; ?></h1>
+ /* Style the list */
+ ul.breadcrumb {
+     padding: 10px 16px;
+     list-style: none;
+     background-color: transparent;
+ }
+
+ /* Display list items side by side */
+ ul.breadcrumb li {
+     display: inline;
+     font-size: 16px;
+ }
+
+ /* Add a slash symbol (/) before/behind each list item */
+ ul.breadcrumb li+li:before {
+     padding: 8px;
+     color: black;
+     content: "/\00a0";
+ }
+
+ /* Add a color to all links inside the list */
+ ul.breadcrumb li a {
+     color: #0275d8;
+     text-decoration: none;
+ }
+
+ /* Add a color on mouse-over */
+ ul.breadcrumb li a:hover {
+     color: #01447e;
+     text-decoration: underline;
+ }
+ 
+
+</style>
+
+<div>
+    <ul class="breadcrumb">
+	<?php 	$root = WEB_ROOT;
+	echo "<li><a href=\"$root\">Home</a></li>";
+	?>	
+	<li><?php echo $pageTitle; ?></li>
+    </ul>
+
+</div>
+
 
 <ul class="flex-container">
 

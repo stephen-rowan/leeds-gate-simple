@@ -313,6 +313,17 @@
     margin-bottom: 1.125em;
   }
 
+  .show #primary > div, .show #content #item_sidebar > div {
+    border-radius: 20px;
+    background: black;
+    padding: 0.75em 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url("../javascripts/boxsizing.htc");
+    margin-bottom: 1.125em;
+  }
+
   .show #primary > div > *:first-child, .show #content #sidebar > div > *:first-child {
     margin-top: 0em;
   }
@@ -1814,10 +1825,6 @@
 
   .winter #content div {
     border-color: #859ca2;
-  }
-
-  .winter #content #primary > div, .winter #content #sidebar > div {
-    background: #83B16A;
   }
 
   .winter #content .pagination_previous a, .winter #content .pagination_next a {
