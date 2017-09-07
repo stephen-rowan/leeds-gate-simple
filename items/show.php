@@ -113,7 +113,7 @@
 
 	<!--    ------------------------------------------------------------------------------------------------------- -->
 
-	<p>Desciption : <b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Description')); ?></b></p>
+	<p><b>Description:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Description')); ?></p>
 
 
     </div>
@@ -124,7 +124,7 @@
 
 	<!--    ------------------------------------------------------------------------------------------------------- -->
 
-	<p>Voices : <b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Gypsy & Traveller voices')); ?></b></p>
+	<p><b>Voices:</b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Gypsy & Traveller voices')); ?></p>
 
 
     </div>
@@ -139,80 +139,80 @@
 	    <!-- 1) GATE Reference Code -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Reference code'))): ?> 
-		<br><i>Reference code:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Reference code')); ?>
+		<br><b>Reference code:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Reference code')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 2) GATE Title -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Title'))): ?> 
-		<br><i>Title:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?>
+		<br><b>Title:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 3) GATE Name of Creator -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Name of Creator'))): ?> 
-		<br><i>Name of Creator:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Name of Creator')); ?>
+		<br><b>Name of Creator:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Name of Creator')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 4) GATE Dates of Creation -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Dates of Creation'))): ?>
-		<br><i>Dates of Creation:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Dates of Creation')); ?>
+		<br><b>Dates of Creation:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Dates of Creation')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 5) GATE Level of description -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Level of description'))): ?>
-		<br><i>Level of description:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Level of description')); ?>
+		<br><b>Level of description:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Level of description')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 6) GATE Collection -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Collection'))): ?>
-		<br><i>Collection:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Collection')); ?>
+		<br><b>Collection:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Collection')); ?>
 	    <?php endif; ?>
 
 	    <!-- 7) GATE Sub-collection -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Sub-collection'))): ?>
-		<br><i>Sub-collection:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Sub-collection')); ?>
+		<br><b>Sub-collection:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Sub-collection')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 8) GATE Extent and medium of the unit of description -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Extent and medium of the unit of description'))): ?>
-		<br><i>Extent of the unit of description:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Extent and medium of the unit of description')); ?>
+		<br><b>Extent of the unit of description:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Extent and medium of the unit of description')); ?>
 	    <?php endif; ?>
 
 	    <!-- 9) GATE Physical characteristics and technical requirements -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Physical characteristics and technical requirements'))): ?> 
-		<br><i>Physical characteristics and technical requirements:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Physical characteristics and technical requirements')); ?>
+		<br><b>Physical characteristics and technical requirements:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Physical characteristics and technical requirements')); ?>
 	    <?php endif; ?>
 
 	    <!-- 10) GATE Conditions governing access -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Conditions governing access'))): ?> 
-		<br><i>Conditions governing access:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing access')); ?>
+		<br><b>Conditions governing access:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing access')); ?>
 	    <?php endif; ?>
 
 	    <!-- 11) GATE Conditions governing reproduction -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Conditions governing reproduction'))): ?> 
-		<br><i>Conditions governing reproduction:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing reproduction')); ?>
+		<br><b>Conditions governing reproduction:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Conditions governing reproduction')); ?>
 	    <?php endif; ?>
 
 
 	    <!-- 12) GATE Language of material -->
 
 	    <?php if (metadata('item', array('Leeds-GATE element set','GATE Language of material'))): ?> 
-		<br><i>Language of material:</i> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Language of material')); ?>
+		<br><b>Language of material:</b> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Language of material')); ?>
 	    <?php endif; ?>
 
 

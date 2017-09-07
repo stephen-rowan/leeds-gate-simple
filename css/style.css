@@ -121,7 +121,6 @@
 
   body {
     font-family: "Cinzel", sans-serif;
-    font-weight: 600;
     font-size: 12px;
     line-height: 24px;
     word-wrap: break-word;
@@ -747,6 +746,8 @@
   footer {
     margin-top: 1.5em;
     padding: 0 16px;
+    margin-top: 1.0em;
+    padding: 0 1px;
   }
 
   footer p {

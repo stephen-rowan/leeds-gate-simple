@@ -123,9 +123,9 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 	<!-- CollectionTree data -->
 
 	<?php
-	$collectionId = metadata('collection', 'id');
-	$collectionTree = get_db()->getTable('CollectionTree')->getCollectionTree($collectionId);
-	echo $this->CollectionTreeList($collectionTree);
+	//$collectionId = metadata('collection', 'id');
+	//$collectionTree = get_db()->getTable('CollectionTree')->getCollectionTree($collectionId);
+	//echo $this->CollectionTreeList($collectionTree);
 	?>
 
 	<!-- Leeds_GATE_get_child_collections() function -->

@@ -1,5 +1,5 @@
 <?php
-$pageTitle = __('Our collections');
+$pageTitle = __('Our Collections');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
 
