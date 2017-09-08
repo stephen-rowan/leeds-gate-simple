@@ -4,8 +4,8 @@ ul.tab {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #506d40;
+  border-radius: 0px;
 }
 
 /* Float the list items side by side */
@@ -26,18 +26,18 @@ ul.tab li a {
 
 /* Change background color of links on hover */
 ul.tab li a:hover {
-  background-color: #ddd;
+  background-color: #74a559;
 }
 
 /* Create an active/current tablink class */
-ul.tab li a:focus, .active {
-  background-color: #ccc;
+ul.tab li a:focus {
+  background-color: #83b16a;
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
+  border-radius: 0px;
 }

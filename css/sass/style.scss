@@ -163,7 +163,8 @@
 	font-family: "Cinzel", sans-serif;
 	//font-weight: 600;
 	font-size: 12px;
-	line-height: 24px;
+	//line-height: 24px;
+	line-height: 20px;
 	word-wrap: break-word;
 	height: 100%;
 	
@@ -346,7 +347,7 @@
     }
     .show #primary > div, .show #content #sidebar > div {
 	border-radius: 20px;	     
-	background: #83B16A;
+	//background: #83B16A;
 	//background: black;
 	//border-style: solid;
 	//border-width: 10px 0 0 0;
@@ -363,6 +364,17 @@
     .show #primary > div, .show #content #item_sidebar > div {
 	border-radius: 20px;	     
 	background: black;
+	padding: 0.75em 16px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url("../javascripts/boxsizing.htc");
+	margin-bottom: 1.125em;
+	
+    }
+    .show #primary > div, .show #content #tabbed_content {
+	border-radius: 20px;	     
+	min-height: 450px;
 	padding: 0.75em 16px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1661,13 +1673,13 @@
 	background-color: #dfe2e2;
     }
     .winter a:link {
-	color: #228494;
+	//color: #228494;
     }
     .winter a:visited {
-	color: #43ADB8;
+	//color: #43ADB8;
     }
     .winter a:hover, .winter a:active, .winter a:focus {
-	color: #3acacc;
+	//color: #3acacc;
     }
     .winter header {
 	background-color: #fff;
@@ -2472,9 +2484,12 @@
 	box-sizing: inherit;
     }
     nav.top .nav-menu {
-	width: 60%;
-	//border-radius: 25px;	     
+	width: 100%;
+	//width: 60%;
+	
+	border-radius: 25px;	     
 	background: #ccc;
+	font-weight: bold;
 	//display: inline-block;
 	display: block;
 	position: relative;
@@ -2722,6 +2737,7 @@
 	float: left;
 	margin-right: 2.5641%;
 	display: inline;
+	border-radius: 20px;	     
 	//height:200px;
     }
     .show #sidebar, .exhibit-item-show #sidebar {
