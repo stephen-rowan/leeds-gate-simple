@@ -364,6 +364,7 @@
     .show #primary > div, .show #content #item_sidebar > div {
 	border-radius: 20px;	     
 	background: black;
+	min-height: 450px;
 	padding: 0.75em 16px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -444,6 +445,7 @@
     nav ul {
 	list-style: none;
 	margin: 0 auto;
+	font-family: "Cinzel";	
     }
     nav a {
 	display: inline-block;
@@ -776,6 +778,7 @@
 	//bottom:0;
     }
     footer p {
+	font-family: "Cantarell Regular", sans-serif;
 	padding-bottom: 0em;
 	//padding-bottom: 1.5em;
     }
@@ -850,7 +853,7 @@
 	margin-bottom: 1.125em;
 	*zoom: 1;
     }
-    #content > div > *:only-child, #content section > *:only-child {
+   #content > div > *:only-child, #content section > *:only-child {
 	margin-top: 0;
     }
     #content > div:after, #content section:after {
@@ -1808,7 +1811,8 @@
 	//background-color: #2f3e4a;
     }
     .winter footer p {
-	color: #fff;
+	color: black;
+	//color: #fff;
     }
     .winter .exhibit-page-nav {
 	background-color: #4b6569;

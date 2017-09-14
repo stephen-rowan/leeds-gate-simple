@@ -12,10 +12,7 @@
 
 
 	    <div align="right">
-		<?php
-		Leeds_GATE_logo();
-		?>
-		
+				
 		<style>
 
 		 /* Style all font awesome icons */
@@ -56,6 +53,10 @@
 		
 		<a href="https://twitter.com/GATEArchive" i class="fa fa-twitter"></a>
 		<a href="https://www.facebook.com/LeedsGATE/" i class="fa fa-facebook"></a>
+
+		<?php
+		Leeds_GATE_logo();
+		?>
 		
 		<?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 	    </div>

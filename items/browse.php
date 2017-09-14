@@ -3,9 +3,57 @@ $pageTitle = __('Browse Items');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
-<h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
+<style>
 
+ /* Style the list */
+ ul.breadcrumb {
+     font-family: "Cinzel", sans-serif;
+     font-weight: bold;
+     padding: 10px 16px;
+     list-style: none;
+     background-color: transparent;
+ }
 
+ /* Display list items side by side */
+ ul.breadcrumb li {
+     display: inline;
+     font-size: 16px;
+ }
+
+ /* Add a slash symbol (/) before/behind each list item */
+ ul.breadcrumb li+li:before {
+     padding: 8px;
+     color: black;
+     content: "/\00a0";
+ }
+
+ /* Add a color to all links inside the list */
+ ul.breadcrumb li a {
+     color: #0275d8;
+     text-decoration: none;
+ }
+
+ /* Add a color on mouse-over */
+ ul.breadcrumb li a:hover {
+     color: #01447e;
+     text-decoration: underline;
+ }
+ 
+
+</style>
+
+<div>
+    <ul class="breadcrumb">
+	<?php 	$root = WEB_ROOT;
+	echo "<li><a href=\"$root\">Home</a></li>";
+	?>	
+	<li><?php echo $pageTitle; ?></li>
+    </ul>
+
+</div>
+
+<div>
+    
 <ul class="flex-container">
 
 <?php foreach (loop('items') as $item): ?>
@@ -36,14 +84,10 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 <?php endforeach; ?>
 </ul>
 
-
+</div>
 
 <?php echo pagination_links(); ?>
 
-<div id="outputs">
-    <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
-    <?php echo output_format_list(false); ?>
-</div>
 
 <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
 

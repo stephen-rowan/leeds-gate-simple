@@ -314,6 +314,7 @@
   .show #primary > div, .show #content #item_sidebar > div {
     border-radius: 20px;
     background: black;
+    min-height: 450px;
     padding: 0.75em 16px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -397,6 +398,7 @@
   nav ul {
     list-style: none;
     margin: 0 auto;
+    font-family: "Cinzel";
   }
 
   nav a {
@@ -761,6 +763,7 @@
   }
 
   footer p {
+    font-family: "Cantarell Regular", sans-serif;
     padding-bottom: 0em;
   }
 
@@ -1912,7 +1915,7 @@
   }
 
   .winter footer p {
-    color: #fff;
+    color: black;
   }
 
   .winter .exhibit-page-nav {

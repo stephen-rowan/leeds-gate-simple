@@ -11,6 +11,8 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 
  /* Style the list */
  ul.breadcrumb {
+     font-family: "Cinzel", sans-serif;
+     font-weight: bold;
      padding: 10px 16px;
      list-style: none;
      background-color: transparent;
