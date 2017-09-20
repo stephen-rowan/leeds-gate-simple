@@ -133,6 +133,37 @@
 	    <p><b>Voices:</b><?php echo metadata('item', array('Leeds-GATE element set', 'GATE Gypsy & Traveller voices')); ?></p>
 
 
+	    <hr>
+
+	    <?php $files = $item->getFiles(); ?>
+	    <?php foreach ($files as $file){ ?>
+
+		<?php if ((metadata($file, 'Mime Type')) === 'image/jpeg') { ?>
+		    
+		    <?php //echo "<li><center><img src='" . file_display_url($file) . "'></center></li>"; ?> 
+		    
+    <?php } elseif ((metadata($file, 'Mime Type')) === 'audio/mpeg') { ?>
+
+
+		    <p style="font-size:14px; color:black;"><?php echo metadata($file, 'Original Filename');?></p>
+
+			<a href=<?php echo $file->getWebPath(); ?>>
+			    
+			    <?php echo "<img src="; ?>
+			    <?php echo "/application/views/scripts/images/fallback-audio.png" ; ?>
+
+			    <?php echo "></a></center></li>"; ?>
+
+		<?php } else { ?>
+
+		    <?php echo "nada"; ?>
+
+		<?php } ?>
+
+	    <?php } ?>
+
+	    
+
 	</div>
 
 	<!--    ------------------------------------------------------------------------------------------------------- -->

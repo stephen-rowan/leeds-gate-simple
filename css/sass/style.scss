@@ -417,7 +417,7 @@
     }
 
     .image {
-	height: 4.5em;
+	//height: 4.5em;
 	width: auto;
 	float: left;
 	display: block;
@@ -1138,7 +1138,7 @@
     #home #content #featured-collection {
 	background: #83B16A;
 	color: white;
-    }
+	    }
     #home #content #featured-exhibit {
 	background: #CEAD25;
 	color: white;
@@ -2702,6 +2702,7 @@
     #home #content #featured-collection {
 	width: 50%;
 	height: 33%;
+	//height: 100%;
 	clear: right;
 	float: right;
 	margin-right: 0;

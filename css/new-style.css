@@ -1,5 +1,7 @@
 /* Style the list */
 ul.tab {
+  width: 100%;
+  display: table;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -10,15 +12,19 @@ ul.tab {
 
 /* Float the list items side by side */
 ul.tab li {
-  float: left;
+  display: table-cell;
+  height: 35px;
+  width: 20%;
 }
 
 /* Style the links inside the list items */
 ul.tab li a {
-  display: inline-block;
+  display: block;
+  height: 35px;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  align: center;
+  padding: 10px 10px;
   text-decoration: none;
   transition: 0.3s;
   font-size: 17px;
