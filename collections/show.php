@@ -15,7 +15,8 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
      font-weight: bold;
      padding: 10px 16px;
      list-style: none;
-     background-color: transparent;
+     //background-color: transparent;
+     background-color: #83B16A;
  }
 
  /* Display list items side by side */
@@ -47,8 +48,12 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 </style>
 
 
-<div>
-    <ul class="breadcrumb">
+<div id ="breadcrumb-collection">
+
+
+<ul class="breadcrumb">
+
+
 
 	<?php
 	$root = WEB_ROOT;

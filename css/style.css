@@ -171,6 +171,14 @@
     transform: scale(1.15);
   }
 
+  #breadcrumb-collection {
+    background-color: #83B16A;
+  }
+
+  #breadcrumb-item {
+    background-color: #AE7259;
+  }
+
   .collection.record {
     border-radius: 25px;
     width: 200px;

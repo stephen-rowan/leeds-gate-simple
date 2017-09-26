@@ -42,7 +42,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 </style>
 
-<div>
+<div id ="breadcrumb-item">
     <ul class="breadcrumb">
 	<?php 	$root = WEB_ROOT;
 	echo "<li><a href=\"$root\">Home</a></li>";
