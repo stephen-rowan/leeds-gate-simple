@@ -76,7 +76,6 @@
   .item.record a {
     display: inline-block;
     margin-bottom: 8px;
-    width: 100%;
     margin-right: 8px;
     text-decoration: none;
     color: black;
@@ -84,11 +83,91 @@
   .item.record img {
     border: none;
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
     display: block;
-    background: #ccc;
   }
   .item.record a:hover img {
+    transform: scale(1.15);
+  }
+
+  #home-featured-item {
+    border-radius: 20px;
+    background-color: #AE7259;
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    min-height: 120px;
+    height: 33%;
+    clear: right;
+    margin-right: 0;
+    box-sizing: border-box;
+    display: block;
+  }
+  #home-featured-item a {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+  }
+  #home-featured-item img {
+    border: none;
+  }
+  #home-featured-item a:hover img {
+    transform: scale(1.15);
+  }
+
+  #home-featured-collection {
+    border-radius: 20px;
+    background-color: #83B16A;
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding: 5px;
+    min-height: 120px;
+    height: 33%;
+    clear: right;
+    margin-right: 0;
+    box-sizing: border-box;
+    display: block;
+  }
+  #home-featured-collection a {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+  }
+  #home-featured-collection img {
+    border: none;
+  }
+  #home-featured-collection a:hover img {
+    transform: scale(1.15);
+  }
+
+  #home-featured-exhibit {
+    border-radius: 20px;
+    background-color: #CEAD25;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    min-height: 120px;
+    height: 33%;
+    clear: right;
+    margin-right: 0;
+    box-sizing: border-box;
+    display: block;
+  }
+  #home-featured-exhibit a {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: black;
+  }
+  #home-featured-exhibit img {
+    border: none;
+  }
+  #home-featured-exhibit a:hover img {
     transform: scale(1.15);
   }
 
@@ -804,7 +883,6 @@
 
   #content > div, #collection-content section {
     border-radius: 25px;
-    background-color: #774e30;
     border-style: solid;
     border-width: 10px 0 0 0;
     overflow: visible;
@@ -819,9 +897,24 @@
     *zoom: 1;
   }
 
+  #content > div, #featured-item section {
+    border-style: none;
+    border-width: 0 0 0 0;
+    overflow: visible;
+    padding: 0.75em 16px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *behavior: url("../javascripts/boxsizing.htc");
+    margin-bottom: 1.125em;
+    *zoom: 1;
+  }
+
   #content > div, #content section {
     border-radius: 25px;
-    background-color: transparent;
     border-style: none;
     border-width: 0 0 0 0;
     overflow: visible;
@@ -1101,10 +1194,7 @@
   }
 
   #home #content div img {
-    border: 1px solid #dfe2e2;
     display: block;
-    max-height: 100%;
-    width: auto;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -3055,6 +3145,13 @@
     display: inline;
   }
 
+  div.itemfile {
+    height: 25%;
+    width: 25%;
+    float: left;
+    margin: 10px 20px 10px 10px;
+  }
+
   /* !---------- Collections ---------- */
   .collections.show #primary .element-set {
     width: 61.53846%;
@@ -3074,6 +3171,13 @@
 
   .collections.show .item-img {
     margin-left: 0;
+  }
+
+  div.collectionfile {
+    height: 25%;
+    width: 25%;
+    float: left;
+    margin: 10px 20px 10px 10px;
   }
 
   /* !---------- ExhibitBuilder ---------- */

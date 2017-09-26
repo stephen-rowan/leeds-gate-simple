@@ -11,24 +11,27 @@
 <?php //fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
 
 
-<!-- Featured Collection -->
+<!-- Featured Collection <div id="featured-collection"> -->
 
-
-<div id="featured-collection">
-    <h3><?php echo __('Featured Collection'); ?></h3>
+<div id="home-featured-collection"> <!-- style="background-color: #83B16A"> -->
+    
 
     <?php 
     if (get_theme_option('Display Featured Collection') !== '0' 
 	&& $featuredCollections = get_records('Collection', array('featured' => 1, 'sort_field' => 'random'),1)
     ):
     foreach ($featuredCollections as $collection): 
-
     ?>
 	
 	<?php
 	$title = metadata($collection, array('Leeds-GATE element set', 'GATE Title'), array('snippet' => 150));
 	$description = metadata($collection, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
 	?>
+
+
+	<h3><?php echo __('Featured Collection'); ?></h3>
+
+	<!-- 	<br> -->
 	
 	<h3><?php
 	    
@@ -41,16 +44,30 @@
 	    ?>
 
 	</h3>
+
+	<!-- 	<br> -->
 	
-	<?php //if ($collectionImage = record_image($collection)): ?>
 
-	<?php //echo link_to($this->collection, 'show', $collectionImage, array('class' => 'image')); ?>
+	<!-- Collection Image  -->
+<!--	<div class = "collectionfile"> -->
+		<?php
+		$xlinkid = metadata($collection, 'id');
+		$xlinktext = metadata($collection, array('Leeds-GATE element set', 'GATE Reference code'));
+		$xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.png';
+		echo "<a href=\collections/show/$xlinkid><img src=\"$xroot\"  /></a>";
+		?>
 
+<!--	</div> -->
+
+
+	<!-- Collection Image  -->
+
+
+	
+
+	<?php //if ($description): ?>
+	<?php //echo $description; ?>
 	<?php //endif; ?>
-
-	<?php if ($description): ?>
-	    <p class="collection-description"><?php echo $description; ?></p>
-	<?php endif; ?>
 
     <?php 
     
@@ -61,18 +78,17 @@
     echo '<p>' . __('No featured collections are available.') . '</p>';
     endif; 
     ?>
+
 </div>
 
 
-
-
-<div id="featured-item">
+<div id="home-featured-item">
 
     <!-- Required by theme settings ... -->
     <?php random_featured_items(1); ?>
     <!-- Required by theme settings ... -->
     
-    <h3><?php echo __('Featured Item'); ?></h3>
+    
     <!-- https://forum.omeka.org/t/how-to-show-multiple-featured-collections/4332 -->
     <?php 
     if (get_theme_option('Display Featured Item') !== '0' 
@@ -80,41 +96,63 @@
     ):
     foreach ($featuredItems as $item):
 
-       
-?>
-
-    <?php
-
-    $itemtitle = metadata($item, array('Leeds-GATE element set', 'GATE Title'), array('snippet' => 150));
-    $itemdescription = metadata($item, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
-		  ?>
     
-    <h3><?php
-    
-    $itemId = metadata($item, 'id');
+    ?>
 
-    $itemlink = WEB_ROOT.'/items/show/'.$itemId;;
 
-    echo "<a href=\"$itemlink\">$itemtitle</a>";
-    
+	<h3><?php echo __('Featured Item'); ?></h3>
+
+	
+	<!-- <br>  -->
+
+	<?php
+
+	$itemtitle = metadata($item, array('Leeds-GATE element set', 'GATE Title'), array('snippet' => 150));
+	$itemdescription = metadata($item, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
+	$itemId = metadata($item, 'id');
+	$itemlink = WEB_ROOT.'/items/show/'.$itemId;;
+	
+	$itemfile = $item->getFile();
+	$itemuri = $itemfile->getWebPath('square_thumbnail');
 	?>
+	
+	<!-- Item image -->
+	
+	<!--	<div class = "itemfile"> -->
+	
+	<?php echo "<a href=".$itemlink; ?>>
+	<?php echo "<img src="; ?>
+	<?php echo $itemuri ; ?>
+	<?php echo "></a>"; ?>
+	
+	<!-- >	</div> -->
+	<!-- Item image -->
+	
 
-    </h3>
+	
+	
 
-<?php if ($itemdescription): ?>
-	    <p class="collection-description"><?php echo $itemdescription; ?></p>
+
+	
+
+	<?php if ($itemdescription): ?>
+	    
+	    <?php //echo $itemdescription; ?>
 	<?php endif; ?>
-        
 
+
+	
     <?php 
 
     
     release_object($item);
     endforeach;
     else: 
-	 echo '<p>' . __('No featured items are available.') . '</p>';
+    echo '<p>' . __('No featured items are available.') . '</p>';
     endif; 
     ?>
+
+    
 </div>
 
 
@@ -123,10 +161,12 @@
           && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
     <!-- Featured Exhibit -->
 
-    <div id="featured-exhibit">
+    <!-- <div id="featured-exhibit">  -->
+    <div id="home-featured-exhibit">
 	<?php echo exhibit_builder_display_random_featured_exhibit(); ?>
 <?php endif; ?>
-    </div>
+</div>
+<!-- - </div>  -->
 
     
 
