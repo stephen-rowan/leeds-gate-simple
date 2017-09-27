@@ -26,13 +26,13 @@
 
  /* Add a color to all links inside the list */
  ul.breadcrumb li a {
-     color: #0275d8;
+     color: #4d4d4d;
      text-decoration: none;
  }
 
  /* Add a color on mouse-over */
  ul.breadcrumb li a:hover {
-     color: #01447e;
+     color:  #8c8c8c;
      text-decoration: underline;
  }
  
@@ -147,12 +147,12 @@
 
 		    <p style="font-size:14px; color:black;"><?php echo metadata($file, 'Original Filename');?></p>
 
-			<a href=<?php echo $file->getWebPath(); ?>>
-			    
-			    <?php echo "<img src="; ?>
-			    <?php echo "/application/views/scripts/images/fallback-audio.png" ; ?>
+		    <a href=<?php echo $file->getWebPath(); ?>>
+			
+			<?php echo "<img src="; ?>
+			<?php echo "/application/views/scripts/images/fallback-audio.png" ; ?>
 
-			    <?php echo "></a></center></li>"; ?>
+			<?php echo "></a></center></li>"; ?>
 
 		<?php } else { ?>
 
@@ -484,11 +484,11 @@
 		    <li><center>     <p style="font-size:14px; color:white;"><?php echo metadata($file, 'Original Filename');?></p>
 
 			<a href=<?php echo $file->getWebPath(); ?>>
-			
-			<?php echo "<img src="; ?>
-			<?php echo "/application/views/scripts/images/fallback-audio.png" ; ?>
+			    
+			    <?php echo "<img src="; ?>
+			    <?php echo "/application/views/scripts/images/fallback-audio.png" ; ?>
 
-			<?php echo "></a></center></li>"; ?>
+			    <?php echo "></a></center></li>"; ?>
 
 		<?php } else { ?>
 
@@ -522,7 +522,7 @@
 
 
 
-   
+    
     <!-- The following prints a list of all tags associated with the item -->
 
 

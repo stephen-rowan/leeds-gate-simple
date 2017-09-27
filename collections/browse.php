@@ -29,13 +29,13 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
  /* Add a color to all links inside the list */
  ul.breadcrumb li a {
-     color: #0275d8;
+     color: #4d4d4d;
      text-decoration: none;
  }
 
  /* Add a color on mouse-over */
  ul.breadcrumb li a:hover {
-     color: #01447e;
+     color:  #8c8c8c;
      text-decoration: underline;
  }
  
@@ -78,7 +78,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 	<!-- end class="collection" -->
 
-<?php endforeach; ?>
+    <?php endforeach; ?>
 
 </ul>
 

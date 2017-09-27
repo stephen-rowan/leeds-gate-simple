@@ -113,7 +113,7 @@
 	$itemlink = WEB_ROOT.'/items/show/'.$itemId;;
 	
 	$itemfile = $item->getFile();
-	$itemuri = $itemfile->getWebPath('square_thumbnail');
+	$itemuri = $itemfile->getWebPath('fullsize');
 	?>
 	
 	<!-- Item image -->
