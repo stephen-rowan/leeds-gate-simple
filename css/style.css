@@ -176,7 +176,7 @@
   }
 
   #breadcrumb-item {
-    background-color: #AE7259;
+    background-color: #9A634C;
   }
 
   .collection.record {
@@ -400,7 +400,7 @@
 
   .show #primary > div, .show #content #item_sidebar > div {
     border-radius: 20px;
-    background: black;
+    background: #737373;
     min-height: 450px;
     padding: 0.75em 16px;
     -webkit-box-sizing: border-box;
@@ -1324,7 +1324,7 @@
   }
 
   .items.show #primary > div {
-    background: #83B16A;
+    background: #9A634C;
     border-top-style: solid;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;

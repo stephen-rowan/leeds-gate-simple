@@ -26,13 +26,13 @@
 
  /* Add a color to all links inside the list */
  ul.breadcrumb li a {
-     color: #4d4d4d;
+     color: #404040;
      text-decoration: none;
  }
 
  /* Add a color on mouse-over */
  ul.breadcrumb li a:hover {
-     color:  #8c8c8c;
+     color:  #6a6a6a;
      text-decoration: underline;
  }
  
@@ -96,13 +96,23 @@
 
 <!-- Begin primary -->
 
+
+
+
+
+
 <div id="primary">
 
+
+
+
+    
     <!-- Begin tabbed-content style -->
     
     <div id="tabbed_content">
 
-        <ul class="tab">
+	<!--         <div class="tab"> -->
+	<ul class="tab">
 
 	    <!-- Description is the default tab -->
 
@@ -110,6 +120,7 @@
 	    <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Voices')">Gypsy and Traveller Voices</a></li>
 	    <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Details')">Details</a></li>
 	    <li><a href="javascript:void(0)" class="tablinks" onclick="openItem(event, 'Citation')">Citation</a></li>
+	    
 
 	</ul>    
 
