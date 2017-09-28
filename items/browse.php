@@ -54,13 +54,13 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <div>
     
-<ul class="flex-container">
+    <ul class="flex-container">
 
-<?php foreach (loop('items') as $item): ?>
+	<?php foreach (loop('items') as $item): ?>
 
-<li class="item record">
+	    <li class="item record">
 
-<div><?php //echo link_to_item(metadata('item', array('Leeds-GATE element set', 'GATE Title')), array('class'=>'permalink')); ?></div>
+		<div><?php //echo link_to_item(metadata('item', array('Leeds-GATE element set', 'GATE Title')), array('class'=>'permalink')); ?></div>
 
 <?php //echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?>
 

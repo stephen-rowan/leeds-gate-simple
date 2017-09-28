@@ -67,16 +67,13 @@
     border-radius: 20px;
     width: 100px;
     height: 100px;
-    margin-top: 20px;
     text-align: center;
-    padding: 5px;
     clear: both;
     background: #eee;
+    background-color: transparent;
   }
   .item.record a {
     display: inline-block;
-    margin-bottom: 8px;
-    margin-right: 8px;
     text-decoration: none;
     color: black;
   }
@@ -105,8 +102,6 @@
     display: block;
   }
   #home-featured-item a {
-    margin-bottom: 8px;
-    margin-right: 8px;
     text-decoration: none;
     color: black;
   }
