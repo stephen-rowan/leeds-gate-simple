@@ -14,17 +14,6 @@
 <!-- Featured Collection <div id="featured-collection"> -->
 
 
-<style>
-
-a.img {
-     height: 100px;
-     width: 100px
- }
-
-
-</style>
-
-
 
     <div id="home-featured-collection"> <!-- style="background-color: #83B16A"> -->
     
@@ -144,11 +133,6 @@ a.img {
 	<!-- >	</div> -->
 	<!-- Item image -->
 	
-
-
-	
-
-
 	
 
 	<?php if ($itemdescription): ?>

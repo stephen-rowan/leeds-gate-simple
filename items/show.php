@@ -75,11 +75,7 @@
 	?>
 	<li> <?php echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?></li>
     </ul>
-
-    
-    
-
-    
+ 
 </div>
 
 
