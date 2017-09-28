@@ -154,12 +154,26 @@
 
 		    <p style="font-size:14px; color:black;"><?php echo metadata($file, 'Original Filename');?></p>
 
+		    <style>
+
+		     .audio-img {
+			 height: 100px;
+			 width: 100px;
+		     }
+
+		     img {
+			 max-width: 100%;
+			 height: auto;
+		     }
+		    </style>
+		    <div class="audio-img">
 		    <a href=<?php echo $file->getWebPath(); ?>>
 			
 			<?php echo "<img src="; ?>
 			<?php echo "/application/views/scripts/images/fallback-audio.png" ; ?>
 
-			<?php echo "></a></center></li>"; ?>
+			<?php echo "></a></div></center></li>"; ?>
+		    
 
 		<?php } else { ?>
 
