@@ -13,7 +13,20 @@
 
 <!-- Featured Collection <div id="featured-collection"> -->
 
-<div id="home-featured-collection"> <!-- style="background-color: #83B16A"> -->
+
+<style>
+
+a.img {
+     height: 100px;
+     width: 100px
+ }
+
+
+</style>
+
+
+
+    <div id="home-featured-collection"> <!-- style="background-color: #83B16A"> -->
     
 
     <?php 
@@ -49,15 +62,16 @@
 	
 
 	<!-- Collection Image  -->
-<!--	<div class = "collectionfile"> -->
-		<?php
-		$xlinkid = metadata($collection, 'id');
-		$xlinktext = metadata($collection, array('Leeds-GATE element set', 'GATE Reference code'));
-		$xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.png';
-		echo "<a href=\collections/show/$xlinkid><img src=\"$xroot\"  /></a>";
-		?>
+	<!--	<div class = "collectionfile"> -->
 
-<!--	</div> -->
+	    <?php
+	    $xlinkid = metadata($collection, 'id');
+	    $xlinktext = metadata($collection, array('Leeds-GATE element set', 'GATE Reference code'));
+	    $xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.png';
+	    echo "<a href=\collections/show/$xlinkid><img src=\"$xroot\"  /></a>";
+	    ?>
+
+	<!--	</div> -->
 
 
 	<!-- Collection Image  -->
@@ -117,6 +131,8 @@
 	?>
 	
 	<!-- Item image -->
+
+
 	
 	<!--	<div class = "itemfile"> -->
 	
@@ -129,7 +145,7 @@
 	<!-- Item image -->
 	
 
-	
+
 	
 
 
@@ -162,7 +178,7 @@
     <!-- Featured Exhibit -->
 
     <!-- <div id="featured-exhibit">  -->
-    <div id="home-featured-exhibit">
+<div id="home-featured-exhibit">
 	<?php echo exhibit_builder_display_random_featured_exhibit(); ?>
 <?php endif; ?>
 </div>
