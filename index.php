@@ -15,7 +15,7 @@
 
 
 
-    <div id="home-featured-collection"> <!-- style="background-color: #83B16A"> -->
+<div id="home-featured-collection"> <!-- style="background-color: #83B16A"> -->
     
 
     <?php 
@@ -30,6 +30,28 @@
 	$description = metadata($collection, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
 	?>
 
+
+
+
+	<!-- 	<br> -->
+	
+
+	<!-- Collection Image  -->
+	<!--	<div class = "collectionfile"> -->
+	<div class="item record home">	
+	    <?php
+	    $xlinkid = metadata($collection, 'id');
+	    $xlinktext = metadata($collection, array('Leeds-GATE element set', 'GATE Reference code'));
+	    $xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.png';
+	    echo "<a href=\collections/show/$xlinkid><img src=\"$xroot\"  /></a>";
+	    ?>
+
+	</div>
+
+	<!--	</div> -->
+
+
+	<!-- Collection Image  -->
 
 	<h3><?php echo __('Featured Collection'); ?></h3>
 
@@ -46,33 +68,11 @@
 	    ?>
 
 	</h3>
-
-	<!-- 	<br> -->
 	
 
-	<!-- Collection Image  -->
-	<!--	<div class = "collectionfile"> -->
-	<div class="item record">	
-	    <?php
-	    $xlinkid = metadata($collection, 'id');
-	    $xlinktext = metadata($collection, array('Leeds-GATE element set', 'GATE Reference code'));
-	    $xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.png';
-	    echo "<a href=\collections/show/$xlinkid><img src=\"$xroot\"  /></a>";
-	    ?>
-
-	</div>
-
-	    <!--	</div> -->
-
-
-	    <!-- Collection Image  -->
-
-
-	    
-
-	    <?php //if ($description): ?>
-	    <?php //echo $description; ?>
-	    <?php //endif; ?>
+	<?php //if ($description): ?>
+	<?php //echo $description; ?>
+	<?php //endif; ?>
 
     <?php 
     
@@ -84,60 +84,61 @@
     endif; 
     ?>
 
-	</div>
+</div>
 
 
-	<div id="home-featured-item">
+<div id="home-featured-item">
 
-	    <!-- Required by theme settings ... -->
-	    <?php random_featured_items(1); ?>
-	    <!-- Required by theme settings ... -->
-	    
-	    
-	    <!-- https://forum.omeka.org/t/how-to-show-multiple-featured-collections/4332 -->
-	    <?php 
-	    if (get_theme_option('Display Featured Item') !== '0' 
-		&& $featuredItems = get_records('item', array('featured' => 1, 'sort_field' => 'random'), 1)
-	    ):
-	    foreach ($featuredItems as $item):
+    <!-- Required by theme settings ... -->
+    <?php random_featured_items(1); ?>
+    <!-- Required by theme settings ... -->
+    
+    
+    <!-- https://forum.omeka.org/t/how-to-show-multiple-featured-collections/4332 -->
+    <?php 
+    if (get_theme_option('Display Featured Item') !== '0' 
+	&& $featuredItems = get_records('item', array('featured' => 1, 'sort_field' => 'random'), 1)
+    ):
+    foreach ($featuredItems as $item):
 
-	    
-	    ?>
+    
+    ?>
+
+	
+
+	
+	<!-- <br>  -->
+
+	<?php
+
+	$itemtitle = metadata($item, array('Leeds-GATE element set', 'GATE Title'), array('snippet' => 150));
+	$itemdescription = metadata($item, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
+	$itemId = metadata($item, 'id');
+	$itemlink = WEB_ROOT.'/items/show/'.$itemId;;
+	
+	$itemfile = $item->getFile();
+	$itemuri = $itemfile->getWebPath('fullsize');
+	?>
+	
+	<!-- Item image -->
+
+	
+	<!--	<div class = "itemfile"> -->
 
 
-		<h3><?php echo __('Featured Item'); ?></h3>
-
-		
-		<!-- <br>  -->
-
-		<?php
-
-		$itemtitle = metadata($item, array('Leeds-GATE element set', 'GATE Title'), array('snippet' => 150));
-		$itemdescription = metadata($item, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
-		$itemId = metadata($item, 'id');
-		$itemlink = WEB_ROOT.'/items/show/'.$itemId;;
-		
-		$itemfile = $item->getFile();
-		$itemuri = $itemfile->getWebPath('fullsize');
-		?>
-		
-		<!-- Item image -->
-
-		
-		<!--	<div class = "itemfile"> -->
-
-
-		<div class="item record">	
+	<div class="item record home">	
 
 		<?php echo "<a href=".$itemlink; ?>>
-	<?php echo "<img src="; ?>
-	<?php echo $itemuri ; ?>
-	<?php echo "></a>"; ?>
-	
-	</div>
-	<!-- Item image -->
-	
-	
+		<?php echo "<img src="; ?>
+		<?php echo $itemuri ; ?>
+		<?php echo "></a>"; ?>
+		
+	    </div>
+	    <!-- Item image -->
+	    
+
+	    <h3><?php echo __('Featured Item'); ?></h3>
+	    
 
 	<?php if ($itemdescription): ?>
 	    

@@ -64,11 +64,15 @@
   }
 
   .item.record {
-    border-radius: 20px;
     width: 100px;
     height: 100px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     text-align: center;
     clear: both;
+    float: left;
     background: #eee;
     background-color: transparent;
   }
@@ -87,19 +91,48 @@
     transform: scale(1.15);
   }
 
+  .item.record.home {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: center;
+    clear: both;
+    float: left;
+    background: #eee;
+    background-color: transparent;
+  }
+  .item.record.home a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }
+  .item.record.home img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .item.record.home a:hover img {
+    transform: scale(1.15);
+  }
+
   #home-featured-item {
     border-radius: 20px;
     background-color: #AE7259;
     color: white;
     width: 100%;
+    min-height: 200px;
     text-align: left;
     padding: 5px;
-    min-height: 120px;
     height: 33%;
-    clear: right;
     margin-right: 0;
     box-sizing: border-box;
-    display: block;
+  }
+  #home-featured-item h3 {
+    text-align: center;
+    vertical-align: middle;
   }
   #home-featured-item a {
     text-decoration: none;
@@ -108,6 +141,8 @@
   #home-featured-item img {
     border: none;
     width: 200px;
+    float: left;
+    margin: 0 0 10px 10px;
   }
   #home-featured-item a:hover img {
     transform: scale(1.15);
@@ -120,12 +155,14 @@
     width: 100%;
     text-align: left;
     padding: 5px;
-    min-height: 120px;
+    min-height: 200px;
     height: 33%;
-    clear: right;
     margin-right: 0;
     box-sizing: border-box;
-    display: block;
+  }
+  #home-featured-collection h3 {
+    text-align: center;
+    vertical-align: middle;
   }
   #home-featured-collection a {
     margin-bottom: 8px;
@@ -136,6 +173,8 @@
   #home-featured-collection img {
     border: none;
     width: 200px;
+    float: left;
+    margin: 0 0 10px 10px;
   }
   #home-featured-collection a:hover img {
     transform: scale(1.15);
