@@ -35,7 +35,23 @@
 
 	<!-- 	<br> -->
 	
+	<h3><?php echo __('Featured Collection'); ?></h3>
 
+	<!-- 	<br> -->
+	
+	<h3><?php
+	    
+	    $collectionId = metadata($collection, 'id');
+
+	    $collectionlink = WEB_ROOT.'/collections/show/'.$collectionId;;
+
+	    echo "<a href=\"$collectionlink\">$title</a>";
+	    
+	    ?>
+
+	</h3>
+
+	
 	<!-- Collection Image  -->
 	<!--	<div class = "collectionfile"> -->
 	<div class="item record home">	
@@ -53,21 +69,7 @@
 
 	<!-- Collection Image  -->
 
-	<h3><?php echo __('Featured Collection'); ?></h3>
-
-	<!-- 	<br> -->
 	
-	<h3><?php
-	    
-	    $collectionId = metadata($collection, 'id');
-
-	    $collectionlink = WEB_ROOT.'/collections/show/'.$collectionId;;
-
-	    echo "<a href=\"$collectionlink\">$title</a>";
-	    
-	    ?>
-
-	</h3>
 	
 
 	<?php //if ($description): ?>
@@ -121,23 +123,31 @@
 	?>
 	
 	<!-- Item image -->
+	<h3><?php echo __('Featured Item'); ?></h3>
 
+
+
+	<h3><?php
+	    echo "<a href=\"$itemlink\">$itemtitle</a>";
+	    ?>
+	</h3>
+	
 	
 	<!--	<div class = "itemfile"> -->
 
 
 	<div class="item record home">	
 
-		<?php echo "<a href=".$itemlink; ?>>
-		<?php echo "<img src="; ?>
-		<?php echo $itemuri ; ?>
-		<?php echo "></a>"; ?>
-		
-	    </div>
-	    <!-- Item image -->
+	    <?php echo "<a href=".$itemlink; ?>>
+	    <?php echo "<img src="; ?>
+	    <?php echo $itemuri ; ?>
+	    <?php echo "></a>"; ?>
+	    
+	</div>
+	<!-- Item image -->
 	    
 
-	    <h3><?php echo __('Featured Item'); ?></h3>
+	    
 	    
 
 	<?php if ($itemdescription): ?>
