@@ -38,6 +38,8 @@
 	<h3><?php echo __('Featured Collection'); ?></h3>
 
 	<!-- 	<br> -->
+
+	<div class="home-item-record">
 	
 	<h3><?php
 	    
@@ -64,6 +66,8 @@
 
 	</div>
 
+
+	</div>
 	<!--	</div> -->
 
 
@@ -107,7 +111,7 @@
     ?>
 
 	
-
+	
 	
 	<!-- <br>  -->
 
@@ -125,11 +129,11 @@
 	<!-- Item image -->
 	<h3><?php echo __('Featured Item'); ?></h3>
 
+	<div class="home-item-record">
 
-
-	<h3><?php
-	    echo "<a href=\"$itemlink\">$itemtitle</a>";
-	    ?>
+	    <h3><?php
+		echo "<a href=\"$itemlink\">$itemtitle</a>";
+		?>
 	</h3>
 	
 	
@@ -167,6 +171,7 @@
     endif; 
     ?>
 
+	</div>
     
 </div>
 
