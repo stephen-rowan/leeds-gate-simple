@@ -107,8 +107,10 @@ function Leeds_GATE_logo() {
 
     $leedsgateimage = WEB_ROOT.'/themes/simple/images/leedsgate.jpg';
     $leedsgatelink = 'http://leedsgate.co.uk/';
-    echo "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
-    //return "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
+    //echo "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
+    echo "<a href=\"$leedsgatelink\"onclick=\"window.open(this.href); return false;\" onkeypress=\"window.open(this.href); return false;\"><img src=\"$leedsgateimage\"  </img></a>";
+
+   //return "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
 
 }
 

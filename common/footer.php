@@ -15,6 +15,7 @@
      }
 
 
+     
      .floating-box-Leeds-GATE-logo {
 	 float: right;
 	 width: 10%;
@@ -98,13 +99,12 @@
 	    <!-- Add font awesome icons -->
 
 	    <div class="floating-box-twitter">
-		<a href="https://twitter.com/GATEArchive" i class="fa fa-twitter"></a>
+		<a href="https://twitter.com/GATEArchive" i class="fa fa-twitter" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;"></a>
 	    </div>
 
-		<div class="floating-box-facebook">
-		<a href="https://www.facebook.com/LeedsGATE/" i class="fa fa-facebook"></a>
+	    <div class="floating-box-facebook">
+		<a href="https://www.facebook.com/LeedsGATE/" i class="fa fa-facebook" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;"></a>
 	    </div>
-
 	    
 		
 		<?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
