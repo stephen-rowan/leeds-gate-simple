@@ -59,7 +59,8 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 	<!-- begin class="collection" -->
 	
-	<li class="collection record">
+	<!-- <li class="collection record"> -->
+	    <li class="flex-collection">
 
 	    
 	    <?php //$collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>

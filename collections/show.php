@@ -176,6 +176,7 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
         <?php foreach (loop('items') as $item): ?>
             
             <li class="item record">
+	    <!-- <li class="flex-item"> -->
      		<?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
 		
 	 	<?php if (metadata('item', 'has thumbnail')): ?>

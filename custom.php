@@ -79,7 +79,8 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 
 	    //echo "<a href='$linkid'>$linktext</a>";
 	    
-	    echo '<div class="img">';
+	    echo '<div class="flex-collection">';
+	    //echo '<div class="img">';
 	    
 	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
 	    echo "<a href=\"$linkid\"><img src=\"$root\"  </img></a>";
@@ -87,6 +88,7 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 	    
 	    echo $linktext;
 
+	    //echo '</div>';
 	    echo '</div>';
 	    echo '</li>';
 
@@ -110,7 +112,7 @@ function Leeds_GATE_logo() {
     //echo "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
     echo "<a href=\"$leedsgatelink\"onclick=\"window.open(this.href); return false;\" onkeypress=\"window.open(this.href); return false;\"><img src=\"$leedsgateimage\"  </img></a>";
 
-   //return "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
+    //return "<a href=\"$leedsgatelink\"><img src=\"$leedsgateimage\"  </img></a>";
 
 }
 

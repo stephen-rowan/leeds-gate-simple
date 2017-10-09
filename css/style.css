@@ -149,7 +149,7 @@
   }
 
   .flex-container {
-    padding: 0;
+    padding: 5px;
     margin: 0;
     list-style: none;
     -ms-box-orient: horizontal;
@@ -159,9 +159,17 @@
     display: -moz-flex;
     display: -webkit-flex;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+  }
+
+  .flex-collection {
+    padding: 10px;
+  }
+  .flex-collection img {
+    width: 200px;
+  }
+  .flex-collection a:hover img {
+    transform: scale(1.15);
   }
 
   collection-container {
