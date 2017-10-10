@@ -117,3 +117,18 @@ function Leeds_GATE_logo() {
 }
 
 ?>
+
+
+<?php 
+
+function HLF_logo() {
+
+    $hlfimage = WEB_ROOT.'/themes/simple/images/hlf-logo.jpg';
+    $hlflink = 'https://www.hlf.org.uk/';
+
+    echo "<a href=\"$hlflink\"onclick=\"window.open(this.href); return false;\" onkeypress=\"window.open(this.href); return false;\"><img src=\"$hlfimage\"  </img></a>";
+
+
+}
+
+?>

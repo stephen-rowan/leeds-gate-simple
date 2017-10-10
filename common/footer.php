@@ -2,71 +2,7 @@
 
 <footer role="contentinfo">
 
-    <style>
-
-
-     .floating-box-footerText {
-	 float: left;
-	 width: 40%;
-	 /*	 width: 400px; */
-	 /* height: 75px; */
-	 /*  margin: 10px; */
-	 /*  border: 3px solid #73AD21; */
-     }
-
-
-     
-     .floating-box-Leeds-GATE-logo {
-	 float: right;
-	 width: 10%;
-	 height: 75px;
-     }
-
-     .floating-box-facebook {
-	 float: right;
-	 /*  width: 10%; */
-	 height: 75px;
-     }
-
-
-     .floating-box-twitter {
-	 float: right;
-	 /*  width: 10%; */
-	 height: 75px;
-     }
-
-     /* Style all font awesome icons */
-     .fa {
-	 padding: 20px;
-	 font-size: 30px;
-	 width: 20px;
-	 text-align: center;
-	 text-decoration: none;
-	 border-radius: 50%;
-     }
-
-     /* Add a hover effect if you want */
-     .fa:hover {
-	 opacity: 0.7;
-     }
-
-     /* Set a specific color for each brand */
-
-     /* Facebook */
-     .fa-facebook {
-	 background: #3B5998;
-	 color: white;
-     }
-
-     /* Twitter */
-     .fa-twitter {
-	 background: #55ACEE;
-	 color: white;
-     }
-     
-    </style>
-
-    
+       
 
     <div id="custom-footer-text">
 
@@ -91,6 +27,12 @@
 		<?php
 		Leeds_GATE_logo();
 		?>
+	    </div>
+
+	    <div class="floating-box-hlf-logo">
+	    <?php
+	    hlf_logo();
+	    ?>
 	    </div>
 	    
 	    <!-- Add icon library -->

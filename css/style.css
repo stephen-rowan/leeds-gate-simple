@@ -550,6 +550,83 @@
     padding: 0;
   }
 
+  .floating-box-footerText {
+    float: left;
+    width: 40%;
+    /*	 width: 400px; */
+    /* height: 75px; */
+    /*  margin: 10px; */
+    /*  border: 3px solid #73AD21; */
+  }
+
+  .floating-box-Leeds-GATE-logo {
+    float: right;
+    display: inline;
+  }
+  .floating-box-Leeds-GATE-logo img {
+    border: 10px;
+    width: 100px;
+    border: 1px solid #ccc;
+    padding: 2px;
+  }
+  .floating-box-Leeds-GATE-logo a:hover img {
+    transform: scale(1.15);
+  }
+
+  .floating-box-hlf-logo {
+    float: right;
+    display: inline;
+  }
+  .floating-box-hlf-logo img {
+    border: 10px;
+    width: 100px;
+    border: 1px solid #ccc;
+    padding: 2px;
+  }
+  .floating-box-hlf-logo a:hover img {
+    transform: scale(1.15);
+  }
+
+  .floating-box-facebook {
+    float: right;
+    /*  width: 10%; */
+    height: 75px;
+  }
+
+  .floating-box-twitter {
+    float: right;
+    /*  width: 10%; */
+    height: 75px;
+  }
+
+  /* Style all font awesome icons */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  /* Set a specific color for each brand */
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
   /* !---------- Tables ---------- */
   table {
     width: 100%;
