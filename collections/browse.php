@@ -60,7 +60,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 	<!-- begin class="collection" -->
 	
 	<!-- <li class="collection record"> -->
-	    <li class="flex-collection">
+	<li class="flex-collection">
 
 	    
 	    <?php //$collectionTitle = strip_formatting(metadata('collection', array('Leeds-GATE element set', 'GATE Title')));?>
@@ -69,12 +69,13 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 	    <?php
 	    $linkid = metadata('collection', 'id');
 	    $linktext = metadata('collection', array('Leeds-GATE element set', 'GATE Reference code'));
+	    $alttext = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
 	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
-	    echo "<a href=\collections/show/$linkid><img src=\"$root\"  /></a>";
+	    //echo "<a href=\collections/show/$linkid><img src=\"$root\"  /></a>";
+	    echo "<a href=\collections/show/$linkid><img src=\"$root\" alt=\"$alttext\" title=\"$alttext\"  /></a>";
 	    ?>
 
-
-
+	 
 	</li>
 
 	<!-- end class="collection" -->

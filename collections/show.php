@@ -51,7 +51,7 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 <div id ="breadcrumb-collection">
 
 
-<ul class="breadcrumb">
+    <ul class="breadcrumb">
 
 
 
@@ -96,8 +96,12 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 	    <?php
 	    $linkid = metadata('collection', 'id');
 	    $linktext = metadata('collection', array('Leeds-GATE element set', 'GATE Reference code'));
+            $alttext = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
 	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
-	    echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
+	    //echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
+	    //echo "<a href=\"$linkid\"><img src=\"$root\" alt=\"$alttext\" title=\"$alttext\"  /></a>";
+	    echo "<a href=\"$linkid\"><img src=\"$root\" title=\"$alttext\" /></a>";
+
 	    ?>	
 	</center>
 
@@ -176,7 +180,7 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
         <?php foreach (loop('items') as $item): ?>
             
             <li class="item record">
-	    <!-- <li class="flex-item"> -->
+		<!-- <li class="flex-item"> -->
      		<?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
 		
 	 	<?php if (metadata('item', 'has thumbnail')): ?>
