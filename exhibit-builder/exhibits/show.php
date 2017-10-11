@@ -52,7 +52,7 @@ echo head(array(
 
 </style>
 
-<div>
+<div id ="breadcrumb-exhibit">
     <ul class="breadcrumb">
 	<?php 	$root = WEB_ROOT;
 	echo "<li><a href=\"$root\">Home</a></li>";

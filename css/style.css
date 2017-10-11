@@ -385,6 +385,10 @@
     text-decoration: underline;
   }
 
+  #breadcrumb-exhibit {
+    background-color: #CEAD25;
+  }
+
   #breadcrumb-collection {
     background-color: #83B16A;
   }

@@ -2,10 +2,16 @@
 
 <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
+
+
 <div id="primary">
+
+    <div id ="breadcrumb-exhibit">                              
     
     <?php echo all_element_texts('item'); ?>
 
+</div>
+                         
 </div><!-- end primary -->
 
 <aside id="sidebar">

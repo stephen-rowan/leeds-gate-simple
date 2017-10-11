@@ -32,7 +32,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 
 </style>
 
-<div>
+<div id ="breadcrumb-exhibit">
     <ul class="breadcrumb">
 	<?php 	$root = WEB_ROOT;
 	echo "<li><a href=\"$root\">Home</a></li>";
@@ -43,25 +43,27 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 </div>
 
 <?php if (count($exhibits) > 0): ?>
-<nav class="navigation" id="secondary-nav">
-    <?php echo nav(array(
-        array(
-            'label' => __('Browse All'),
-            'uri' => url('exhibits')
-        ),
-        array(
-            'label' => __('Browse by Tag'),
-            'uri' => url('exhibits/tags')
-        )
-    )); ?>
-</nav>
+    <nav class="navigation" id="secondary-nav">
+	<?php echo nav(array(
+            array(
+		'label' => __('Browse All'),
+		'uri' => url('exhibits')
+            ),
+            array(
+		'label' => __('Browse by Tag'),
+		'uri' => url('exhibits/tags')
+            )
+	)); ?>
+    </nav>
 
-<?php echo pagination_links(); ?>
+    <?php echo pagination_links(); ?>
 
-<?php $exhibitCount = 0; ?>
-<?php foreach (loop('exhibit') as $exhibit): ?>
-    <?php $exhibitCount++; ?>
-    <div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
+    <?php $exhibitCount = 0; ?>
+    <?php foreach (loop('exhibit') as $exhibit): ?>
+	<?php $exhibitCount++; ?>
+
+	<div id ="breadcrumb-exhibit">
+	    <div class="exhibit <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
         <h2><?php echo link_to_exhibit(); ?></h2>
         <?php if ($exhibitImage = record_image($exhibit, 'square_thumbnail')): ?>
             <?php echo exhibit_builder_link_to_exhibit($exhibit, $exhibitImage, array('class' => 'image')); ?>
@@ -72,7 +74,13 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
         <?php if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
         <p class="tags"><?php echo __('Tags: ') . $exhibitTags; ?></p>
         <?php endif; ?>
-    </div>
+
+
+</div>
+
+</div>
+
+
 <?php endforeach; ?>
 
 <?php echo pagination_links(); ?>
