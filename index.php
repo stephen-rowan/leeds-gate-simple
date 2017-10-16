@@ -120,10 +120,17 @@
 	$itemtitle = metadata($item, array('Leeds-GATE element set', 'GATE Title'), array('snippet' => 150));
 	$itemdescription = metadata($item, array('Leeds-GATE element set', 'GATE Description'), array('snippet' => 150));
 	$itemId = metadata($item, 'id');
-	$itemlink = WEB_ROOT.'/items/show/'.$itemId;;
+	$itemlink = WEB_ROOT.'/items/show/'.$itemId;
 	
 	$itemfile = $item->getFile();
-	$itemuri = $itemfile->getWebPath('fullsize');
+
+//added if statement to catch null file value
+
+if ($itemfile !== null)                                               
+    $itemuri = $itemfile->getWebPath('fullsize');
+
+
+//$itemuri = $itemfile->getWebPath('fullsize');
 	?>
 	
 	<!-- Item image -->
