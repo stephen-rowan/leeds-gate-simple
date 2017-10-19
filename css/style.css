@@ -148,6 +148,11 @@
     height: auto;
   }
 
+  #collection-logo img {
+    width: 100%;
+    height: auto;
+  }
+
   .flex-container {
     padding: 5px;
     margin: 0;
@@ -163,10 +168,10 @@
   }
 
   .flex-collection {
-    padding: 10px;
+    padding: 20px;
   }
   .flex-collection img {
-    width: 200px;
+    width: 150px;
   }
   .flex-collection a:hover img {
     transform: scale(1.15);
@@ -3086,8 +3091,14 @@
      -- ExhibitBuilder
    */
   /* !---------- Header ---------- */
+  #collection-logo img {
+    width: 300px;
+    height: auto;
+  }
+
   #header-logo img {
     width: 100%;
+    #width: 100%;
     height: auto;
   }
 
