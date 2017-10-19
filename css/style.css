@@ -56,7 +56,7 @@
     max-height: 40px;
   }
   .worko-tabs .flex-tabs .panel {
-    background-color: #9A634C;
+    background-color: #BC8B76;
     padding: 20px;
     min-height: 300px;
     display: none;
@@ -67,21 +67,21 @@
     display: inline-block;
     padding: 10px;
     vertical-align: top;
-    background-color: #BC8B76;
+    background-color: #d2b9ad;
     cursor: hand;
     cursor: pointer;
     text-align: center;
     align: center;
   }
   .worko-tabs .tab:hover {
-    background-color: #d5b7aa;
+    background-color: #ede3de;
   }
 
   #tab-one:checked ~ .tabs #tab-one-label,
   #tab-two:checked ~ .tabs #tab-two-label,
   #tab-three:checked ~ .tabs #tab-three-label,
   #tab-four:checked ~ .tabs #tab-four-label {
-    background-color: #9A634C;
+    background-color: #BC8B76;
     cursor: default;
   }
 
@@ -258,7 +258,7 @@
     border-radius: 20px;
     width: 100%;
     height: 33%;
-    background-color: #AE7259;
+    background-color: #BC8B76;
     color: white;
     padding: 5px;
     box-sizing: border-box;
@@ -399,7 +399,7 @@
   }
 
   #breadcrumb-item {
-    background-color: #9A634C;
+    background-color: #BC8B76;
   }
 
   .collection.record {
@@ -1602,7 +1602,7 @@
   }
 
   .items.show #primary > div {
-    background: #9A634C;
+    background: #BC8B76;
     border-top-style: solid;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
