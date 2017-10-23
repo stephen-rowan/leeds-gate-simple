@@ -571,9 +571,9 @@
 	word-wrap: break-word;
 	height: 100%;
 	
-	//background-image: url("another-pale-blur-small.jpg");
-	//background-size: 100% 100%;
-	//background-repeat: no-repeat;
+	background-image: url("another-pale-blur-small.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 
     }
 
@@ -3229,7 +3229,8 @@
 	font: Cantarell Regular;
 	font-size: 15px;
 	margin-bottom: 1.5em;
-	background-color: Transparent;
+	background-color: #ccc;
+	//background-color: Transparent;
 	width: 40%;
 	float: left;
 	margin-left: 1.69492%;
