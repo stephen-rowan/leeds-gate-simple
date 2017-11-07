@@ -453,6 +453,10 @@
     background-color: #BC8B76;
   }
 
+  #breadcrumb-simple {
+    background-color: #ccc;
+  }
+
   .collection.record {
     border-radius: 25px;
     width: 200px;

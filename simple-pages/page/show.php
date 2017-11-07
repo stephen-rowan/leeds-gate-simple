@@ -13,8 +13,7 @@
      font-weight: bold;
      padding: 10px 16px;
      list-style: none;
-     background-color: transparent;
- }
+      }
 
  /* Display list items side by side */
  ul.breadcrumb li {
@@ -29,12 +28,14 @@
      content: "/\00a0";
  }
 
- 
- 
+  
+#breadcrumb-simple { 
+    background-color: #ccc;
+}
 
 </style>
 
-<div>
+<div id = "breadcrumb-simple">
     <ul class="breadcrumb">
 	<?php 	$root = WEB_ROOT;
 	echo "<li><a href=\"$root\">Home</a></li>";
