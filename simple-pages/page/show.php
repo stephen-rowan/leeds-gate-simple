@@ -13,7 +13,7 @@
      font-weight: bold;
      padding: 10px 16px;
      list-style: none;
-      }
+ }
 
  /* Display list items side by side */
  ul.breadcrumb li {
@@ -28,10 +28,15 @@
      content: "/\00a0";
  }
 
-  
-#breadcrumb-simple { 
-    background-color: #ccc;
-}
+ 
+ #breadcrumb-simple { 
+     background-color: #ccc;
+ }
+
+
+ #primary { 
+     background-color: #ccc;
+ }
 
 </style>
 
