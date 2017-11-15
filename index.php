@@ -60,7 +60,7 @@
 	    <?php
 	    $xlinkid = metadata($collection, 'id');
 	    $xlinktext = metadata($collection, array('Leeds-GATE element set', 'GATE Reference code'));
-	    $xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.png';
+	    $xroot = WEB_ROOT.'/themes/simple/images/'.$xlinktext.'.jpg';
 	    echo "<a href=\collections/show/$xlinkid><img src=\"$xroot\"  /></a>";
 	    ?>
 
