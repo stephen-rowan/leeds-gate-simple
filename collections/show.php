@@ -99,7 +99,7 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 	$linkid = metadata('collection', 'id');
 	$linktext = metadata('collection', array('Leeds-GATE element set', 'GATE Reference code'));
 	$alttext = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
-	$root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
+	$root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.jpg';
 	//echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
 	//echo "<a href=\"$linkid\"><img src=\"$root\" alt=\"$alttext\" title=\"$alttext\"  /></a>";
 	echo "<a href=\"$linkid\"><img src=\"$root\" title=\"$alttext\" /></a>";

@@ -83,7 +83,7 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 	    echo '<div class="flex-collection">';
 	    //echo '<div class="img">';
 	    
-	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.png';
+	    $root = WEB_ROOT.'/themes/simple/images/'.$linktext.'.jpg';
 	    //echo "<a href=\"$linkid\"><img src=\"$root\"  </img></a>";
 
         echo "<a href=\"$linkid\"><img src=\"$root\" alt=\"$alttext\" title=\"$alttext\"  /></a>";
