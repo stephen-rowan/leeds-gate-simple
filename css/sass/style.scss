@@ -1282,8 +1282,8 @@
     }
     .item-pagination li {
 	display: inline-block;
-	//background-color: #fff;
-	background-color: transparent;
+	background-color: #BC8B76;
+	//background-color: transparent;
 	margin: 0 0 0.75em 0;
 	padding: 0.375em 8px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px;
@@ -1295,9 +1295,12 @@
     }
     .item-pagination .next {
 	float: right;
+	//font-size: 16px;
+	border-radius: 20px;	     
     }
     .item-pagination .previous {
 	float: left;
+	border-radius: 20px;	     
     }
 
     /* !---------- Header---------- */
