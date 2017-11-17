@@ -199,6 +199,7 @@
     max-height: 100%;
     display: block;
     background: #ccc;
+    font-size: 200%;
   }
 
   .flex-collection-show-header-item-2 {
@@ -439,6 +440,10 @@
   a:hover {
     color: #595959;
     text-decoration: underline;
+  }
+
+  a:hover img {
+    font-size: 200%;
   }
 
   #breadcrumb-exhibit {

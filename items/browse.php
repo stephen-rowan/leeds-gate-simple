@@ -38,7 +38,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
      color:  #8c8c8c;
      text-decoration: underline;
  }
- 
+
 
 </style>
 
@@ -58,27 +58,23 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 	<?php foreach (loop('items') as $item): ?>
 
+
 	    <li class="item record">
+		<!-- <li class="flex-item"> -->
+     		<?php $itemTitle = strip_formatting(metadata('item', array('Leeds-GATE element set', 'GATE Title'))); ?>
+		
+	 	<?php if (metadata('item', 'has thumbnail')): ?>
+		    
+		    <div class="img">
+			<?php echo link_to_item(item_image('fullsize', array('alt' => $itemTitle))); ?>
+		    </div>
+		<?php endif; ?>
 
-		<div><?php //echo link_to_item(metadata('item', array('Leeds-GATE element set', 'GATE Title')), array('class'=>'permalink')); ?></div>
-
-<?php //echo metadata('item', array('Leeds-GATE element set', 'GATE Title')); ?>
-
-<?php if (metadata('item', 'has thumbnail')): ?>
-
-<?php //echo link_to_item(item_image('fullsize')); ?>
-  <div class="img">
-<?php echo link_to_item(item_image('fullsize')); ?>
-</div>
-
-<?php endif; ?>
+	    </li>
 
 
-<?php //fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-
-    
-
-</li><!-- end class="item hentry" -->
+  
+	    
 
 
 <?php endforeach; ?>

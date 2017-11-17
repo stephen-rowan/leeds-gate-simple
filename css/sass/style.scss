@@ -174,7 +174,7 @@
     }
 
 
-    
+        
     .flex-container {
 	padding: 5px;
 	margin: 0;
@@ -255,10 +255,12 @@
    	    max-height: 100%;
    	    display: block;
    	    background: #ccc;
-   	}
+	    font-size: 200%;
+	}
     	
     	//a:hover img {
     	//    transform: scale(1.15);
+
     	//}
 
 
@@ -332,6 +334,7 @@
 	
 	a:hover img {
     	    transform: scale(1.15);
+	    //font-size: 150%;
     	}
     }
     
@@ -607,13 +610,20 @@
     a {
 	color: #333333;
 	text-decoration: none;
-    }
+	    }
 
     /* a:hover */
     a:hover {
 	color:  #595959;
 	text-decoration: underline;
     }
+
+
+    a:hover img {
+    	//transform: scale(1.15);
+	font-size: 200%;
+    }
+    
 
 
 
@@ -681,6 +691,7 @@
     	
     	a:hover img {
     	    transform: scale(1.15);
+	    //font-size: 200%;
     	}
 
     }

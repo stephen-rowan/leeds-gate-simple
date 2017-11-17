@@ -76,7 +76,7 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 	    set_current_record('collection', get_record_by_id('collection', $linkid));
 
 	    $linktext = metadata('collection', array('Leeds-GATE element set', 'GATE Reference code'));
-        $alttext = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
+            $alttext = metadata('collection', array('Leeds-GATE element set', 'GATE Title'));
 
 	    //echo "<a href='$linkid'>$linktext</a>";
 	    
@@ -87,7 +87,7 @@ function Leeds_GATE_get_child_collections_images($collectionId) {
 	    //echo "<a href=\"$linkid\"><img src=\"$root\"  </img></a>";
 
         echo "<a href=\"$linkid\"><img src=\"$root\" alt=\"$alttext\" title=\"$alttext\"  /></a>";
-        //echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
+	    //echo "<a href=\"$linkid\"><img src=\"$root\"  /></a>";
 	    
 	    echo $linktext;
 

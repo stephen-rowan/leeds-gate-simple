@@ -43,8 +43,9 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
      color:  #8c8c8c;
      text-decoration: underline;
  }
- 
 
+   
+  
 </style>
 
 
