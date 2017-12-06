@@ -1,8 +1,6 @@
 # Leeds-GATE-Theme
 
-Welcome to the Leeds-GATE-Theme (Omeka development project).
-
-This is the development repository for the Leeds-GATE-Theme : an Omeka Theme developed for the Leeds-GATE Archives (https://www.leedsgateheritage.com/).
+This is the development repository for the Leeds-GATE Omeka theme (leeds-gate-simple) developed for the Leeds-GATE Archives (https://www.leedsgateheritage.com/).
 
 This project is an adaption of the Seasons Omeka theme (© 2008-2015 Roy Rosenzweig Center for History and New Media).
 
@@ -11,4 +9,4 @@ This program is free software: you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
-# leeds-gate-simple
+
