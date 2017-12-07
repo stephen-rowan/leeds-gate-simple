@@ -206,9 +206,11 @@
     font-family: "Cantarell Regular", sans-serif;
     font-size: 12px;
     border-radius: 25px;
+    overflow: auto;
     width: 50%;
     height: 300px;
     text-align: center;
+    padding: 16px;
     clear: both;
     background-color: #83B16A;
     opacity: 0.8;

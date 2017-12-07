@@ -110,18 +110,15 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
     
     <div class="flex-collection-show-header-item-2">
 	<h3>About <?php echo $alttext; ?> ...</h3>
+
+	<p>For full details about this collection, click <b><a href="#details">here</a></b>.</p>
 	
 	<?php if (metadata('collection', array('Leeds-GATE element set','GATE Description'))): ?> 
 	    <?php //echo metadata('collection', array('Leeds-GATE element set', 'GATE Description')); ?>
 	    <?php $summary = metadata('collection', array('Leeds-GATE element set', 'GATE Description'));
-	    echo substr($summary, 0,800);
-	    echo " ... ";
-	    ?>	    
+	    echo $summary; //substr($summary, 0,800);	    ?>	    
 	<?php endif; ?>
 
-
-	
-	<p>For full details about this collection, click <b><a href="#details">here</a></b>.</p>
     </div>
 
 
