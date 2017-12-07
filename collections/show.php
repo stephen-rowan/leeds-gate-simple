@@ -372,7 +372,7 @@ $collectionDesc = strip_formatting(metadata('collection', array('Leeds-GATE elem
 	    <?php endif; ?>
 	</p>
     
-	
+	<br>	
     </div>
 
 
